@@ -122,6 +122,8 @@ function web2feel_scripts() {
 	// Custom
 	wp_enqueue_style ('offset-theme-style', get_template_directory_uri().'/css/offset.css');
 	wp_enqueue_style ('custom-theme-style', get_template_directory_uri().'/css/custom.css');
+	wp_enqueue_style ('custom-theme-style', get_template_directory_uri().'/css/custom-header.css');
+	wp_enqueue_style ('custom-theme-style', get_template_directory_uri().'/css/custom-footer.css');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
