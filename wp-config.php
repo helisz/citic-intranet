@@ -20,6 +20,8 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/Users/chrishe-mac/Documents/chrishe_chrishe-mac_6666/PHP/CITICINTRANET/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_NAME', 'citic_intranet');
 
 // ## PRODUCTION ##
@@ -89,7 +91,7 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
-// define('DISABLE_CACHE', true);
+define('DISABLE_CACHE', true);
 
 /* That's all, stop editing! Happy blogging. */
 
