@@ -37,7 +37,7 @@
 		
 		<div class="col-sm-8 mainmenu">
 		<div class="mobilenavi"></div>
-				<?php wp_nav_menu( array( 'container_id' => 'submenu', 'theme_location' => 'primary','container_class' => 'topmenu','menu_id'=>'topmenu' ,'menu_class'=>'sfmenu' ) ); ?>
+				<?php wp_nav_menu( array( 'container_id' => 'submenu', 'theme_location' => 'primary','container_class' => 'topmenu','menu_id'=>'topmenu' ,'menu_class'=>'sfmenu text-right' ) ); ?>
 		</div>
 		
 		</div> <!-- end row -->

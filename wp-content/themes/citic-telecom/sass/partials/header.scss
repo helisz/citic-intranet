@@ -1,0 +1,16 @@
+.mainmenu{
+	text-align: right;
+	#submenu{
+		display: inline-block;
+		float: none;
+		ul{
+				li.menu-item{
+				a{
+					font-size: 16px;
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+

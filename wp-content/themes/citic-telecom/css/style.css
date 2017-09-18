@@ -1,3 +1,8 @@
-h1 {
-  color: #FF0000; }
-
+.mainmenu {
+  text-align: right; }
+  .mainmenu #submenu {
+    display: inline-block;
+    float: none; }
+    .mainmenu #submenu ul li.menu-item a {
+      font-size: 16px;
+      color: #263368; }

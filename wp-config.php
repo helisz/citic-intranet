@@ -24,15 +24,15 @@ define('WP_CACHE', true); //Added by WP-Cache Manager
 define( 'WPCACHEHOME', '/Users/chrishe-mac/Documents/chrishe_chrishe-mac_6666/PHP/CITICINTRANET/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_NAME', 'citic_intranet');
 
-// ## PRODUCTION ##
-// define('DB_USER', 'intranet');
-// define('DB_PASSWORD', 'citic1616');
-// define('DB_HOST', '192.168.127.36');
+## PRODUCTION ##
+define('DB_USER', 'intranet');
+define('DB_PASSWORD', 'citic1616');
+define('DB_HOST', '192.168.127.36');
 
 // ## LOCAL ##
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-define('DB_HOST', 'localhost');
+// define('DB_USER', 'root');
+// define('DB_PASSWORD', '');
+// define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
