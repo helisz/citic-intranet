@@ -1,0 +1,57 @@
+// DEFINITIONS
+$gray: #F4F4F4 !default;
+
+$black: #292929 !default;
+$black-lighter: lighten( $black, 20% );
+$black-darker: darken( $black, 20% );
+
+$primary-color: #263368 !default;
+$primary-color-lighter: lighten( $primary-color, 20% );
+$primary-color-darker: darken( $primary-color, 5% );
+
+$secondary-color: #d7000f !default;
+$secondary-color-lighter: lighten( $secondary-color, 20% );
+$secondary-color-darker: darken( $secondary-color, 20% );
+
+$text-color: $primary-color !default;
+$text-color-lighter: lighten( $primary-color, 20% );
+$text-color-darker: darken( $primary-color, 20% );
+
+$border-color: #E3E3E3 !default;
+
+// define color
+.bg-gray{
+	background-color: $gray;
+}
+.bg-primary{
+	background-color: $primary-color;
+}
+.bg-secondary{
+	background-color: $secondary-color;
+}
+.text-normal{
+	font-weight: 400 !important;
+}
+.text-bold{
+	font-weight: bold !important;
+}
+.text-lighter{
+	font-weight: lighter !important;
+}
+.text-bolder{
+	font-weight: bolder !important;
+}
+.text-primary{
+	color: $primary-color !important;
+}
+.text-secondary{
+	color: $secondary-color !important;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}

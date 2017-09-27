@@ -1,3 +1,77 @@
+.bg-gray {
+  background-color: #F4F4F4; }
+
+.bg-primary {
+  background-color: #263368; }
+
+.bg-secondary {
+  background-color: #d7000f; }
+
+.text-normal {
+  font-weight: 400 !important; }
+
+.text-bold {
+  font-weight: bold !important; }
+
+.text-lighter {
+  font-weight: lighter !important; }
+
+.text-bolder {
+  font-weight: bolder !important; }
+
+.text-primary {
+  color: #263368 !important; }
+
+.text-secondary {
+  color: #d7000f !important; }
+
+.section-title h1, .section-title h2 {
+  font-weight: lighter;
+  color: #263368; }
+
+@media (min-width: 1600px) {
+  .container {
+    width: 1540px;
+    max-width: 100%; } }
+
+.section, .section-wide {
+  margin-bottom: 20px; }
+
+a {
+  outline: none !important; }
+
+.slider-container {
+  width: 100%;
+  padding-top: 56.25%;
+  /* 1:1 Aspect Ratio */
+  position: relative;
+  /* If you want text inside of it */ }
+  .slider-container .slider-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+
+.image-bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.tool-list .tool {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  display: block; }
+  .tool-list .tool:hover {
+    border: 1px solid #d7000f; }
+
 .mainmenu {
   text-align: right; }
   .mainmenu #submenu {
@@ -6,3 +80,41 @@
     .mainmenu #submenu ul li.menu-item a {
       font-size: 16px;
       color: #263368; }
+
+#bottom {
+  background: #263368;
+  border-top: 5px solid #secondary-color; }
+  #bottom .botwid ul li > a {
+    color: white; }
+
+.site-footer {
+  background: #263368;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
+.home-slider .slider-content .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(38, 51, 104, 0.55);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .home-slider .slider-content .text .title {
+    color: white; }
+  .home-slider .slider-content .text .meta {
+    color: white;
+    font-size: 0.7em;
+    opacity: 0.5; }
+
+.home-slider .text {
+  color: #263368; }
+
+.home-slider a:hover .slider-content .text {
+  background: #263368;
+  color: white; }
+
+.home-slider a:hover .text {
+  color: #4158b3; }

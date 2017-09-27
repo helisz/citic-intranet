@@ -1,0 +1,12 @@
+#bottom{
+	background: $primary-color;    
+	border-top: 5px solid #secondary-color;
+
+	.botwid ul li > a{
+		color: white;
+	}
+}
+.site-footer{
+	background: $primary-color;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

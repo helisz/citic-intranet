@@ -112,6 +112,7 @@ function web2feel_scripts() {
 
 	wp_enqueue_style( 'theme', get_template_directory_uri() . '/theme.css');
 
+
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bootstrap/bootstrap.min.js', array( 'jquery' ), '20120206', true );
 	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array( 'jquery' ), '20120206', true );
 	wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.js', array( 'jquery' ), '20120206', true );	
@@ -122,6 +123,10 @@ function web2feel_scripts() {
 	// Custom
 	wp_enqueue_style ('offset-theme-style', get_template_directory_uri().'/css/offset.css', array(), '1.0.0', "all");
 	wp_enqueue_style ('custom-theme-style', get_template_directory_uri().'/css/style.css', array(), '1.0.0', "all");
+
+	wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_style ('slick-style', get_template_directory_uri().'/css/slick.css', array(), '1.0.0', "all");
+	wp_enqueue_style ('slick-style-theme', get_template_directory_uri().'/css/slick-theme.css', array(), '1.0.0', "all");
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -144,6 +149,31 @@ function exclude_category( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'exclude_category' );
+
+
+// Remove editor for certain page
+function remove_editor_init() {
+    if ( ! is_admin() ) {
+       return;
+    }
+    $current_post_id = filter_input( INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT );
+    $update_post_id = filter_input( INPUT_POST, 'post_ID', FILTER_SANITIZE_NUMBER_INT );
+    if ( isset( $current_post_id ) ) {
+       $post_id = absint( $current_post_id );
+    } else if ( isset( $update_post_id ) ) {
+       $post_id = absint( $update_post_id );
+    } else {
+       return;
+    }
+    if ( isset( $post_id ) ) {
+       $template_file = get_post_meta( $post_id, '_wp_page_template', true );
+       if (  'page-tools.php' === $template_file ) {
+           remove_post_type_support( 'page', 'editor' );
+       }
+    }
+}
+add_action( 'init', 'remove_editor_init' );
+
 
 /**
  * Implement the Custom Header feature.
@@ -211,4 +241,7 @@ else $fflink = '';
 }
 echo $fflink;
 }
+
+
+
 

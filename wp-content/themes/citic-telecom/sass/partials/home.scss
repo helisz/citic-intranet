@@ -1,0 +1,47 @@
+.home-slider{
+	.slider-content{		
+		.text{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(38,51,104,0.55);
+			@include transition(all 0.3s ease-in-out);
+
+			.title{
+				color: white;
+			}
+			.meta{
+				color: white;
+				font-size: 0.7em;
+				opacity: 0.5;
+			}
+		}
+	}
+	.text{
+		color: $text-color;
+	}
+	a:hover{
+		.slider-content{		
+			.text{
+			background: rgba(38,51,104,1);
+				color: white;
+			}
+		}
+		.text{
+			color: $text-color-lighter;
+		}
+	}
+}
+
+.slick-slider{
+	.slick-arrow{
+
+	}
+	.slick-prev.slick-arrow{
+
+	}
+	.slick-next.slick-arrow{
+		
+	}
+}
