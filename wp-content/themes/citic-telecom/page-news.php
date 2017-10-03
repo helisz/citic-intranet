@@ -57,6 +57,7 @@ get_header(); ?>
 				    </div>	
 			 	</div>	
 			<?php endwhile; ?>
+			
 
 			<!-- then the pagination links -->
 			<?php next_posts_link( '&larr; Older posts', $wp_query ->max_num_pages); ?>
