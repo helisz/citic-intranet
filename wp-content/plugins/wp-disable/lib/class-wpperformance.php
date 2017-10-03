@@ -10,6 +10,8 @@ class WpPerformance {
 
 	private $plugin_settings = null;
 
+	private static $enabled_woocommerce = null;
+
 	/**
 	 * Constructor.
 	 * Initializes the plugin by setting localization, filters, and
@@ -19,11 +21,11 @@ class WpPerformance {
 
 		if ( ! $this->test_host() ) { return; }
 
-		if( ! class_exists('Optimisationio_Statistics') ){
-			require_once 'class-optimisationio-statistics.php';
+		if( ! class_exists('Optimisationio_Dashboard') ){
+			require_once 'class-optimisationio-dashboard.php';
 		}
 
-		Optimisationio_Statistics::init();
+		Optimisationio_Dashboard::init();
 
 		new WpPerformance_Admin;		
 
@@ -58,6 +60,16 @@ class WpPerformance {
 	 */
 	public static function delete_transients() {
 		delete_transient( 'wpperformance_ds_tracking_id' );
+		delete_transient( self::OPTION_KEY . '_referalls_spam_blacklist' );
+	}
+	
+	/**
+	 * Delete plugin's options values.
+	 */
+	public static function delete_options() {
+		delete_option( self::OPTION_KEY . '_settings' );
+		delete_option( self::OPTION_KEY . '_combined_google_fonts_requests_number' );
+		delete_option( self::OPTION_KEY . '_combined_font_awesome_requests_number' );
 	}
 
 	public static function delete_spam_comments() {
@@ -159,15 +171,24 @@ class WpPerformance {
 
 		$this->caos_remove_wp_cron();
 
+		$this->check_referral_spam_disable();
+
 		if ( ! is_admin() ) {
 			$this->add_ga_header_script();
-			$this->check_comments_disable();
+			$this->check_pages_disable();
+			$this->check_dns_prefetch();
+		}
+		else{
+			$this->check_admin_notices_display();
 		}
 
+		$this->check_comments_disable();
 		$this->check_feeds_disable();
 
 		add_action( 'wp_print_styles', array( $this, 'enqueue_scripts' ), -1 );
+		add_action( 'wp_print_styles', array( $this, 'dequeue_styles'), -1 );
 		add_action( 'wp_print_scripts', array( $this, 'dequeue_scripts' ), 100 );
+
 	}
 
 	private function get_settings_values() {
@@ -178,9 +199,17 @@ class WpPerformance {
 	public function enqueue_scripts() {
 		$async_links = $this->check_googlefonts_fontawesome_styles();
 		if ( ! empty( $async_links ) ) {
-			wp_enqueue_script( 'wp-disable-load-css', plugin_dir_url( dirname( __FILE__ ) ) . 'js/loadcss.js' );
 			wp_enqueue_script( 'wp-disable-css-lazy-load',  plugin_dir_url( dirname( __FILE__ ) ) . 'js/css-lazy-load.js' );
 			wp_localize_script( 'wp-disable-css-lazy-load', 'WpDisableAsyncLinks', $async_links );
+		}
+	}
+
+	public function dequeue_styles(){
+
+		$settings = $this->get_settings_values();
+
+		if( ! is_admin() && ! is_admin_bar_showing() && isset( $settings['disable_front_dashicons_when_disabled_toolbar'] ) && $settings['disable_front_dashicons_when_disabled_toolbar'] ){
+			wp_deregister_style('dashicons');
 		}
 	}
 
@@ -188,11 +217,9 @@ class WpPerformance {
 
 		$settings = $this->get_settings_values();
 
-		$enabled_woocommerce = in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) );
-
 		$invalid_disable = is_page('lost_password');
 
-		$wc_invalid_disable = !$enabled_woocommerce || $invalid_disable || is_account_page() || is_checkout();
+		$wc_invalid_disable = ! WpPerformance::is_woocommerce_enabled() || $invalid_disable || is_account_page() || is_checkout();
 
 		if ( ! $wc_invalid_disable && isset( $settings['disable_woocommerce_password_meter'] ) && $settings['disable_woocommerce_password_meter'] ) {
 
@@ -308,23 +335,23 @@ class WpPerformance {
 
 	private function update_saved_google_fonts_request( $count ) {
 		$count = ! isset( $count ) ? 0 : (int) $count;
-		$old_val = get_option( self::OPTION_KEY . '_combined_font_awesome_requests' );
+		$old_val = get_option( self::OPTION_KEY . '_combined_font_awesome_requests_number' );
 		if( false === $old_val || ( false !== $old_val && $count > (int) $old_val ) ){
-			update_option( self::OPTION_KEY . '_combined_font_awesome_requests', $count );
+			update_option( self::OPTION_KEY . '_combined_font_awesome_requests_number', $count );
 		}
 	}
 
 	private function update_saved_font_awesome_requests( $count ) {
 		$count = ! isset( $count ) ? 0 : (int) $count;
-		$old_val = get_option( self::OPTION_KEY . '_combined_google_fonts_requests' );
+		$old_val = get_option( self::OPTION_KEY . '_combined_google_fonts_requests_number' );
 		if( false === $old_val || ( false !== $old_val && $count > (int)  $old_val ) ){
-			update_option( self::OPTION_KEY . '_combined_google_fonts_requests', $count );
+			update_option( self::OPTION_KEY . '_combined_google_fonts_requests_number', $count );
 		}
 	}
 
 	public static function saved_external_requests(){
-		$google_fonts = (int) get_option( self::OPTION_KEY . '_combined_google_fonts_requests' );
-		$font_awesome = (int) get_option( self::OPTION_KEY . '_combined_font_awesome_requests' );
+		$google_fonts = (int) get_option( self::OPTION_KEY . '_combined_google_fonts_requests_number' );
+		$font_awesome = (int) get_option( self::OPTION_KEY . '_combined_font_awesome_requests_number' );
 		$google_fonts_saved = 1 < $google_fonts ? $google_fonts - 1 : 0;
 		$font_awesome_saved = 1 < $font_awesome ? $font_awesome - 1 : 0;
 		return $google_fonts_saved + $font_awesome_saved;
@@ -491,16 +518,116 @@ class WpPerformance {
 		}
 	}
 
-	private function check_comments_disable() {
-
-		$settings = $this->get_settings_values();
-
-		if ( isset( $settings['disable_all_comments'] ) && 1 === $settings['disable_all_comments'] ) {
-			add_filter( 'feed_links_show_comments_feed', '__return_false' );
-			add_action( 'wp_footer', array( $this, 'hide_meta_widget_link' ), 100 );
+	public static function synchronize_discussion_data($settings){
+		if ( isset( $settings['disable_gravatars'] ) && 1 === (int) $settings['disable_gravatars'] ) {
+			update_option( 'show_avatars', false );
+		} else {
+			update_option( 'show_avatars', true );
 		}
 
-		add_action( 'template_redirect', array( $this, 'check_comments_template' ) );
+		if ( isset( $settings['default_ping_status'] ) && 1 === (int) $settings['default_ping_status'] ) {
+			update_option( 'default_ping_status', 'close' );
+		} else {
+			update_option( 'default_ping_status', 'open' );
+		}
+
+		if ( isset( $settings['close_comments'] ) && 1 === (int) $settings['close_comments'] ) {
+			update_option( 'close_comments_for_old_posts', true );
+			update_option( 'close_comments_days_old', 28 );
+		} else {
+			update_option( 'close_comments_for_old_posts', false );
+			update_option( 'close_comments_days_old', 14 );
+		}
+
+		if ( isset( $settings['paginate_comments'] ) && 1 === (int) $settings['paginate_comments'] ) {
+			update_option( 'page_comments', true );
+			update_option( 'comments_per_page', 20 );
+		} else {
+			update_option( 'page_comments', false );
+			update_option( 'comments_per_page', 50 );
+		}
+	}
+
+	private function check_admin_notices_display(){
+		$settings = $this->get_settings_values();
+		if ( isset( $settings['disable_admin_notices'] ) && $settings['disable_admin_notices'] ) {
+			add_action('admin_print_scripts', array($this, 'disable_admin_notices') );
+		}
+	}
+
+	public function disable_admin_notices(){
+		global $wp_filter;
+		if (is_user_admin()) {
+			if (isset($wp_filter['user_admin_notices'])) {
+				unset($wp_filter['user_admin_notices']);
+			}
+		} elseif (isset($wp_filter['admin_notices'])) {
+			unset($wp_filter['admin_notices']);
+		}
+		if (isset($wp_filter['all_admin_notices'])) {
+			unset($wp_filter['all_admin_notices']);
+		}
+	}
+
+	private function check_pages_disable(){
+		$settings = $this->get_settings_values();
+		if ( isset( $settings['disable_author_pages'] ) && $settings['disable_author_pages'] ) {
+			add_action( 'template_redirect', array( $this, 'redirect_athor_pages' ) );
+		}
+	}
+
+	public function redirect_athor_pages(){
+		if( get_query_var( 'author' ) || get_query_var( 'author_name' ) ){
+			wp_redirect( home_url(), 307 );
+			exit;
+		}
+	}
+
+	public function comment_admin_menu_remove(){
+		remove_menu_page('edit-comments.php');
+	}
+
+	private function check_dns_prefetch(){
+		
+		$settings = $this->get_settings_values();
+		
+		if( ! $settings['dns_prefetch'] ) {
+			return;
+		}
+
+		$list = array();
+		$host_list = $settings['dns_prefetch_host_list'];
+		$host_list = '' !== $host_list ? explode("\n", $host_list) : array();
+
+		if( ! empty( $host_list ) ){
+			foreach ($host_list as $key => $val) {
+				$val = str_replace( 'http:', '', str_replace( 'https:', '', esc_url( $val ) ) );
+				if( $val && ! in_array($val, $list, true) ){
+					$list[] = $val;
+				}
+			}
+		}
+
+		if( ! empty( $list ) ){
+			foreach ($list as $key => $val) {
+				echo "<link rel=\"dns-prefetch\" href=\"" . $val . "\" />\n";
+			}
+		}
+	}
+
+	private function check_comments_disable() {
+		$settings = $this->get_settings_values();
+		$disable_all_comments = isset( $settings['disable_all_comments'] ) && 1 === $settings['disable_all_comments'];
+		if( $disable_all_comments ){
+			if( ! is_admin() ){
+				add_filter( 'feed_links_show_comments_feed', '__return_false' );
+				add_action( 'wp_footer', array( $this, 'hide_meta_widget_link' ), 100 );
+				add_action( 'template_redirect', array( $this, 'check_comments_template' ) );
+			}
+			else{
+				add_action('admin_menu', array( $this, 'comment_admin_menu_remove' ) );	
+			}
+		}
 	}
 
 	public function check_comments_template() {
@@ -692,27 +819,38 @@ class WpPerformance {
 
 		$settings = $this->get_settings_values();
 
-		// Remove script from wp_cron if option is selected.
-		if ( isset( $settings['caos_remove_wp_cron'] ) && $settings['caos_remove_wp_cron'] && 'on' === esc_attr( $settings['caos_remove_wp_cron'] ) && wp_next_scheduled( 'update_local_ga' ) ) {
-			wp_clear_scheduled_hook( 'update_local_ga' );
-		} elseif ( ! wp_next_scheduled( 'update_local_ga' ) ) {
-			wp_schedule_event( time(), 'daily', 'update_local_ga' );
+		if ( isset( $settings['caos_remove_wp_cron'] ) ){
+			// Remove script from wp_cron if option is selected.
+			if( 'on' === esc_attr( $settings['caos_remove_wp_cron'] ) ){
+				wp_clear_scheduled_hook( 'update_local_ga' );
+			}
+			else if( ! wp_next_scheduled( 'update_local_ga' ) ) {
+				wp_schedule_event( time(), 'daily', 'update_local_ga' );
+			}
 		}
 	}
 
 	private function add_ga_header_script() {
 
+		$settings = $this->get_settings_values();
+
 		$ds_tracking_id = get_transient( 'wpperformance_ds_tracking_id' );
 
 		if ( false === $ds_tracking_id ) {
-
-			$settings = $this->get_settings_values();
 
 			$ds_tracking_id = isset( $settings['ds_tracking_id'] ) && $settings['ds_tracking_id'] ? esc_attr( $settings['ds_tracking_id'] ) : '';
 			set_transient( 'wpperformance_ds_tracking_id', $ds_tracking_id, 60 * 60 * 24 );	// Keep transient for one day.
 		}
 
 		if ( '' !== $ds_tracking_id ) {
+
+			$local_ga_file = dirname( dirname( __FILE__ ) ) . '/cache/local-ga.js';
+			// If file is not created yet, create now!
+			if( ! file_exists( $local_ga_file ) ){
+				ob_start();
+				do_action('update_local_ga');
+				ob_end_clean();
+			}
 
 			$ds_script_position = isset( $settings['ds_script_position'] ) && $settings['ds_script_position'] ? esc_attr( $settings['ds_script_position'] ) : null;
 
@@ -731,5 +869,89 @@ class WpPerformance {
 					add_action( 'wp_head', 'wpperformance_add_ga_header_script', $ds_enqueue_order );
 			}
 		}
+	}
+
+	public function check_referral_spam_disable(){
+		$settings = $this->get_settings_values();
+		if ( isset( $settings['disable_referral_spam'] ) && 1 === $settings['disable_referral_spam'] ) {
+
+			add_filter('request', array($this, 'filter_referral_spam_requests'), 0);
+		}
+	}
+
+	public function filter_referral_spam_requests($request){
+		global $wp_query;
+		
+		$referrer = wp_get_referer() !== false ? wp_get_referer() : ( isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : '' );	// Input var okay.
+		
+		if ( empty( $referrer ) ) {
+			return $request;
+		}
+
+		$referrer = parse_url($referrer, PHP_URL_HOST);
+		
+		$referrers_blacklist = $this->referrals_blacklist();
+
+		if( empty( $referrers_blacklist ) ){
+			return $request;
+		}
+
+		$is_blacklisted = false;
+
+		foreach ($referrers_blacklist as $blist_ref) {
+            if (false !== stripos($referrer, $blist_ref)) {
+            	$is_blacklisted = true;
+            	break;
+            }
+        }
+
+        if( $is_blacklisted ){
+        	status_header(404);
+        	$wp_query->set_404();
+            get_template_part(404);
+            exit();
+        }
+
+        return $request;
+	}
+
+	private function referrals_blacklist(){
+
+		$ret = get_transient( self::OPTION_KEY . '_referalls_spam_blacklist' );
+		
+		if( false === $ret ){
+		
+			$response = wp_remote_get('http://wielo.co/referrer-spam.php');
+			
+			if ($response instanceof WP_Error) {
+	            error_log('Unable to get referrals spam blacklist: ' . $response->get_error_message());
+	            return;
+	        }
+
+	        $ret = $response['body'];
+
+	        if (empty($ret)) {
+	            error_log('Invalid referrals spam blacklist response');
+	            return;
+	        }
+
+	        $ret = json_decode($ret, true);
+
+	        if (null === $ret) {
+	            error_log('Invalid referrals spam blacklist data');
+	            return;
+	        }
+
+	        set_transient( self::OPTION_KEY . '_referalls_spam_blacklist', $ret, DAY_IN_SECONDS );	// Refresh daily.
+	    }
+
+        return $ret;
+	}
+
+	public static function is_woocommerce_enabled(){
+		if( null === WpPerformance::$enabled_woocommerce ){
+			WpPerformance::$enabled_woocommerce = in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) );
+		}
+		return WpPerformance::$enabled_woocommerce;
 	}
 }

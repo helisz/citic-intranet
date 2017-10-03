@@ -13,7 +13,6 @@ class WpPerformance_View {
 		($data) ? extract( $data ) : null;
 
 		ob_start();
-		// include( plugin_dir_path( __FILE__ ) . '../../views/' . $view . '.php' );
 		include plugin_dir_path( __FILE__ ) . '../views/' . $view . '.php';
 		$view = ob_get_contents();
 		ob_end_clean();

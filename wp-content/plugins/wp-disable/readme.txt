@@ -2,8 +2,8 @@
 Contributors: pigeonhut, Jody Nesbitt, optimisation.io
 Tags: Disable Emoji, Disable Embeds, Disable Gravatars, Remove Querystrings, Reduce HTTP Requests, speedup WooCommerce, Close comments
 Requires at least: 4.5
-Tested up to: 4.8
-Stable tag: 1.3.20
+Tested up to: 4.8.1
+Stable tag: 1.5.12
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,13 +16,18 @@ Disable WooCommerce scripts and CSS on non WooCommerce Pages, Disable RSS, Disab
 Disable WooCommerce scripts and CSS on non WooCommerce Pages, Disable RSS, Disable XML-RPC, Disable Autosave, Remove Windows Live Writer tag, Remove Shortlink Tag, Remove WP API from header and
  many more features to help speed and SEO gains.  Now includes <strong>Disable Comments, Heartbeat Control, Selective Disable</strong>
 
+ <strong>**NEW Features:**</strong>
+ Better Stats on Dashboard
+ Disable loading dashicons on front end if admin bar disabled
+ Disable Author Pages
+
 Disabling Emojis does not disable emoticons, it disables the support for Emojis added since WP 4.2 and removes 1 HTTP request.<br>
 
 Disabling Embeds  - script that auto formats pasted content in the visual editor, eg videos, etc. Big issue with this script is it loads on every
 single page. You can still use the default embed code from YouTube, Twitter etc to included content.
 
 Remove Query Strings: If you look at the waterfall view of your page load, you will see your query strings end in something like ver=1.12.4.
-These are called query strings and help determine the version of the script. The problem with query strings like these is that it isn’t very efficient for caching purposes and sometimes prevents caching those assets altogether.  If you are using a CDN already, you can ignore this.
+These are called query strings and help determine the version of the script. The problem with query strings like these is that it isn't very efficient for caching purposes and sometimes prevents caching those assets altogether.  If you are using a CDN already, you can ignore this.
 
 Disabling Gravatars is completely optional, advise, if you don't use them, disable as it gets rid of one more useless HTTP request.
 
@@ -72,39 +77,56 @@ You can try our <a href="https://wordpress.org/plugins/wp-image-compression/">Fr
 
 
 == Changelog ==
-= 1.3.20 =
-Added Dashboard to show stats (work in progress) - aim is to get rid of the sidebar ads
-Moving towards a Modular version to enable a cleaner panel for users.
-Improved function checks for is WooCommerce active
-Improved Settings layout
-Added better analysis to help us improve.
+= 1.5.12 =
+* WooCommerce bugs fixed
+* Syntax error fixed
+* General improvements to GA Offload (Some cases GA code may still not work, does not appear to be a fix for this, if this happens on yours, please ignore the feature)
 
-= 1.3.12 =
-Fix to Some features not showing on existing installs
-Updated menu icon
-tidied up navigation
-Removed Admin bar navigation
+= 1.5.11 =
+* WooCommerce tab not displaying fixed
 
-= 1.3.11 =
-Added support for Heartbeat (please remove any other heartbeat plugins)
-Fixed sidebar navigation
-Added a top navigation for easy access (to support upcoming features)
-Fixed Remove RSD error
-General code tidy up and removed unused functions
+= 1.5.1 =
+* More visual cleanups
+* Removed all webfonts
+* Minor bug fix on reporting on dashboard
+* Plugin is now under 240kb
 
-= 1.3.1 =
-Cleaned up navigation (moved to Optimisation.io in WP menu)
+= 1.5.0 =
+* Finished redesign of plugin
+* All stats now in one central dashboard
+* Removed sidebar navigation completely
+* Remobed Freemius
+* Added check for WooCommerce, so Woo related stuff only shows if Woo is installed
+* Much tighter integration between the 3 optimisation plugins
+* Removed old/excess files
 
-= 1.3.0 =
-Added default option to Google Analytics to make it more clear when its active
-Option to Remove password strength meter js on non woo pages
-Added option to completely disable comments
-Improved folder/file structure
-Added option to disable feed, replaced Disable RSS
-Added option to remove spam comments
-Option to combine and async Google Fonts and Font awesome fonts for better performance
-Removed old versions from WP Repo for better WP Compliance
 
-= 1.2.26 =
-* Improved visuals
-* Cleaner Code, fixed issue that breaks access on some installs
+= 1.4.5 =
+* More visual fixes/general tidy up
+* Added exception to Google Maps so can be enabled per page
+* Minor code fixes
+* Moved Google Analytics to sidebar/addons
+
+= 1.4.4 =
+* Added ability to stop (disable) admin notices from showing
+* removed the stats sub menu item, so everything is now at the top level
+* "local-ga.js" file was created on activation, changed the way this works so it will work now independent of when adding the GA code
+
+= 1.4.3 =
+More dashboard visual tweaks.
+No new features, but this is a stepping stone.
+
+= 1.4.2 =
+* General tidy up on dashboard
+
+= 1.4.1 =
+* removed third party errors out of our dashboard to the top of the page where they belong
+* cleaned out redundant data in GA cache file
+
+= 1.4.0 =
+* New Dashboard Design (Work in progress)
+* Added Average load time of pages to stats
+* Remove Comments navigation when comments disabled
+* Added the ability to block referrer spam (using Piwik Database)
+* Updated Import/Export settings to now include settings for Image Compression and Cache plugins (if active)
+* General code improvements
