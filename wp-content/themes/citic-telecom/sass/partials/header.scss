@@ -4,7 +4,7 @@
 		display: inline-block;
 		float: none;
 		ul{
-				li.menu-item{
+			li.menu-item{
 				a{
 					font-size: 16px;
 					color: $primary-color;
@@ -14,3 +14,85 @@
 	}
 }
 
+.main-custom-menu{
+	background: $secondary-color;
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+
+#main-nav   {
+	height: 50px; 
+	position: relative;
+	z-index: 1;
+	> ul{
+		margin: 0; 
+		padding: 0; 
+		position: relative;
+		> li{
+			display: block;
+			float: left;
+			line-height: 50px; 
+			height: 50px; 
+			margin: 0; padding: 0; 
+			position: relative; 
+			> a{
+				display: block;
+				height: 50px;
+				line-height: 50px;
+				padding: 0px 15px;
+				color: white;
+				font-size: 14px;
+				&:before{
+					// @include transition(all 0.3s ease-in-out);
+					background-color: transparent;
+				}
+				@include tilt-shape;
+			}
+			&:hover{
+				a{
+					color: white !important;
+					&:before{background-color: $primary-color !important;}
+				}
+				> ul {
+					display: block; 
+				}
+			}
+			&:first-child{
+				> a:before{
+					background-color: darken($secondary-color, 3%);
+				}
+			}
+		}
+		ul{
+			display: none; 
+			position: absolute;
+			list-style: none;
+			margin: 0; 
+			padding: 0; 
+			top: 50px; 
+			left: 0;
+			background: $primary-color;
+			z-index: 10;
+			li{
+				float: none; 
+				width: 150px;
+				text-align: left;
+				background-color: lighten($primary-color, 10%);
+				a{
+					padding: 0 10px;
+					width: 100%;
+					display: block;
+				}
+				&:hover{
+					a{
+						background-color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+	&.current-menu-item a, #main-nav .current_page_item a, #main-nav a:hover {
+		color: #000;
+		background: #ccc;
+	}
+}

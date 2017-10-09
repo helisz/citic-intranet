@@ -1,12 +1,69 @@
+
+body{
+	font-size: 12px;
+}
+
+hr{
+	border-color: $primary-color;
+	opacity: 0.3;
+}
 .section-title{
 	& h1, & h2{
 		font-weight: lighter;
 		color: $primary-color;
 	}
 }
+a, button{
+	outline: none !important;
+}
+
+.btn{
+	position: relative;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	@include transition(all 0.3s ease-in-out);
+	@include tilt;
+
+	&:before{
+		content: "";
+		z-index: -1;
+		 -ms-transform: skew(-20deg,0deg); /* IE 9 */
+	    -webkit-transform: skew(-20deg,0deg); /* Safari */
+	    transform: skew(-20deg,0deg); /* Standard syntax */
+	    position: absolute;
+	    top: 0;
+	    left: 0px;
+	    right: 0px;
+	    bottom: 0;
+		@include transition(all 0.3s ease-in-out);
+	}
+	&:hover{		
+		background: transparent;
+		border: none;
+		@include transition(all 0.3s ease-in-out);
+
+	}
 
 
+	&, &.btn-primary{
+		&, &:active, &:visited{
+			color: #EEE !important;
+		}
+		&:hover:before{
+			background-color: $secondary-color;
+		}
+		&:before{
+			background-color: $primary-color;
+		}
+	}
 
+	&, &.btn-md{
+		font-size:14px;
+		padding: 10px 20px;
+	}
+	
+}
 
 // reset
 @media (min-width: 1600px){
@@ -19,22 +76,16 @@
 	margin-bottom: 20px;
 }
 
-a{
-	outline: none !important
-}
-.slider-container{
-	// background-color: red;
-	width: 100%;
-	padding-top: 56.25%; /* 1:1 Aspect Ratio */
-	position: relative; /* If you want text inside of it */
-	.slider-content{
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+a, a *{
+	outline: none !important;
+	color: $primary-color;
+	cursor: pointer;
+	@include transition(all 0.3s ease-in-out);
+	&:hover{
+		color: $secondary-color !important;
 	}
 }
+
 .image-bg{
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -56,3 +107,56 @@ a{
 		}
 	}
 }
+
+.tilt{
+	position: relative;
+	@include tilt;
+}
+.newsblock{	
+	.newsblock-thumbnail-container{
+		width: 100%;
+		padding-top: 56.25%; /* 1:1 Aspect Ratio */
+		position: relative; /* If you want text inside of it */
+		cursor: pointer;
+		.newsblock-thumbnail{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+	}	
+	.newsblock-content{	
+		position: relative;
+		display: table;
+		.newsblock-date{
+			width: 70px;
+			padding: 0 10px;
+			margin-right: 10px;
+			float: left;
+   			display: inline-block;
+			.month{
+				text-transform: uppercase;
+				text-align: center;
+			}
+			.date{
+				color: white;
+				font-weight: bold;
+				text-align: center;
+			}
+		}
+		.newsblock-title{
+			cursor: pointer;
+			margin-left: 80px;
+		    display: table-cell;
+    		vertical-align: middle;
+    		color: $primary-color;
+    		line-height: 125%;
+		}
+	} 
+	&:hover .newsblock-title{
+		color: $secondary-color !important;
+		cursor: pointer;
+	}
+}
+

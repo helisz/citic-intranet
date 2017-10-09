@@ -36,14 +36,24 @@
 		</div>
 		
 		<div class="col-sm-8 mainmenu">
-		<div class="mobilenavi"></div>
-				<?php wp_nav_menu( array( 'container_id' => 'submenu', 'theme_location' => 'primary','container_class' => 'topmenu','menu_id'=>'topmenu' ,'menu_class'=>'sfmenu text-right' ) ); ?>
+			<div class="mobilenavi"></div>
+			<!-- previous Main Navigation	 -->
+			<!-- <?php wp_nav_menu( array( 'container_id' => 'submenu', 'theme_location' => 'primary','container_class' => 'topmenu','menu_id'=>'topmenu' ,'menu_class'=>'sfmenu text-right' ) ); ?> -->
 		</div>
 		
 		</div> <!-- end row -->
+		
 	</header><!-- #masthead -->
-	
-	
+
+	<div class="main-custom-menu hidden-sm-down">
+		<div class="container">
+			<!-- Current Main Navigation -->
+			<?php wp_nav_menu( array( 'container_id' => 'main-nav', 'theme_location' => '01','container_class' => 'topmenu','menu_id'=>'topmenu' ,'menu_class'=>'sfmenu text-right' ) ); ?>
+		</div>
+	</div>
+
+
+
 	<?php if( is_page_template('homepage.php') ){ get_template_part( 'inc/feature' ); } ?>
 
 	<div id="content" class="site-content ">

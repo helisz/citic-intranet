@@ -23,11 +23,11 @@ jQuery(window).load(function() {
 // home news slider	
 jQuery(document).ready(function($){
 	$('.home-news').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		autoplay: true,
-  		autoplaySpeed: 2000,
+		// infinite: true,
+		// slidesToShow: 1,
+		// slidesToScroll: 1,
+		// autoplay: true,
+  		// autoplaySpeed: 2000,
 	});
 });
 

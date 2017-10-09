@@ -55,3 +55,33 @@ $border-color: #E3E3E3 !default;
     -o-transition: $transition;
     transition: $transition;
 }
+
+@mixin tilt{
+	&:before{
+		content: "";
+		z-index: -1;
+		background-color: $primary-color;
+		 -ms-transform: skew(-10deg,0deg); /* IE 9 */
+	    -webkit-transform: skew(-10deg,0deg); /* Safari */
+	    transform: skew(-10deg,0deg); /* Standard syntax */
+	    position: absolute;
+	    top: 0;
+	    left: 5px;
+	    right: 5px;
+	    bottom: 0;
+	}
+}
+@mixin tilt-shape{
+	&:before{
+		content: "";
+		z-index: -1;
+		 -ms-transform: skew(-10deg,0deg); /* IE 9 */
+	    -webkit-transform: skew(-10deg,0deg); /* Safari */
+	    transform: skew(-10deg,0deg); /* Standard syntax */
+	    position: absolute;
+	    top: 0;
+	    left: 5px;
+	    right: 5px;
+	    bottom: 0;
+	}
+}
