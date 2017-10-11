@@ -22,10 +22,19 @@ get_header(); ?>
 				<div class="section">
 					<div class="section-title">
 						<div class="bg-gray p-sm">
-							<div class="text-bold text-lg m-b text-primary">
-								<?php
+										
+							<?php $date = new DateTime("now", new DateTimeZone('Asia/Hong_Kong') ); ?>
+							<div class="text-primary"><?php echo $date->format('Y'); ?> </div>
+							<div class="text-primary">
+								<span class="text-lighter"><?php echo $date->format('F'); ?></span>&nbsp;
+								<span class="text-bold"><?php echo $date->format('d'); ?></span>
+							</div>	
 
-								if ( is_user_logged_in() ) {
+							<div class="">
+								<hr>
+								<div class="text-bold text-primary">
+								<?php
+									if ( is_user_logged_in() ) {
 									    $time = date("H");
 									    $timezone = date("e");
 									    if ($time < "12") {
@@ -40,19 +49,20 @@ get_header(); ?>
 									    if ($time >= "19") {
 									        echo "Good night";
 									    }								    
-									    $current_user = wp_get_current_user(); 
-								    	echo ', ' . $current_user->user_login ;
 								    }
+								    echo ", ";
 							    ?>
+							    </div>	
+							    <div class="text-primary">
+							    	<?php 
+							    	 	$current_user = wp_get_current_user(); 
+								    	echo  $current_user->user_login ;
+								    ?>
+							    </div>
 
-							</div>							
+									   
 
-							<?php $date = new DateTime("now", new DateTimeZone('Asia/Hong_Kong') ); ?>
-							<div class="text-xs text-primary"><?php echo $date->format('Y'); ?> </div>
-							<div class="text-lg m-t-n-sm text-primary">
-								<span class="text-lighter"><?php echo $date->format('F'); ?></span>&nbsp;
-								<span class="text-bold"><?php echo $date->format('d'); ?></span>
-							</div>	
+							</div>				
 						</div>
 					</div>	
 				</div>
