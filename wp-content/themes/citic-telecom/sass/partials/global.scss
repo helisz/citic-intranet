@@ -69,7 +69,15 @@ a, button{
 @media (min-width: 1600px){
 	.container {
 		width: 1540px;
-		max-width: 100%;
+		max-width: 1540px;
+		padding: 0 30px;
+	}
+}
+
+@media (min-width: 1200px){
+	.container {
+		width: 100%;
+		padding: 0 30px;
 	}
 }
 .section, .section-wide{
@@ -80,7 +88,7 @@ a, a *{
 	outline: none !important;
 	color: $primary-color;
 	cursor: pointer;
-	@include transition(all 0.3s ease-in-out);
+	// @include transition(all 0.3s ease-in-out);
 	&:hover{
 		color: $secondary-color !important;
 	}

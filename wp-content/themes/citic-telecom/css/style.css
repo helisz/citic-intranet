@@ -111,7 +111,13 @@ a, button {
 @media (min-width: 1600px) {
   .container {
     width: 1540px;
-    max-width: 100%; } }
+    max-width: 1540px;
+    padding: 0 30px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0 30px; } }
 
 .section, .section-wide {
   margin-bottom: 20px; }
@@ -119,12 +125,7 @@ a, button {
 a, a * {
   outline: none !important;
   color: #263368;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  cursor: pointer; }
 
 a:hover, a *:hover {
   color: #d7000f !important; }
@@ -227,7 +228,7 @@ a:hover, a *:hover {
   color: #263368; }
 
 .main-custom-menu {
-  background: #d7000f;
+  background: #2d3c7b;
   padding: 0;
   margin: 0 0 20px 0; }
 

@@ -14,7 +14,7 @@ get_header(); ?>
 
 <div class="container">
 
-	<div class="section-wide">
+	<div class="section-wide m-t-md">
 		<div class="row">
 
 			<!-- LEFT CONTENT -->
@@ -69,7 +69,7 @@ get_header(); ?>
 
 
 			<!-- CENTER AREA -->
-			<div class="col-md-6">
+			<div class="col-md-7">
 				<!-- <div class="section-title">
 					<h2>最新消息</h2>
 				</div>	 -->
