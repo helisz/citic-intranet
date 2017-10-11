@@ -1,5 +1,6 @@
 // DEFINITIONS
 $gray: #F4F4F4 !default;
+$bg-color: $gray !default;
 
 $black: #292929 !default;
 $black-lighter: lighten( $black, 20% );
@@ -47,6 +48,9 @@ $border-color: #E3E3E3 !default;
 .text-secondary{
 	color: $secondary-color !important;
 }
+.box-radius{
+	border-radius: 5px;
+}
 
 @mixin transition($transition) {
     -webkit-transition: $transition;
@@ -66,8 +70,8 @@ $border-color: #E3E3E3 !default;
 	    transform: skew(-10deg,0deg); /* Standard syntax */
 	    position: absolute;
 	    top: 0;
-	    left: 5px;
-	    right: 5px;
+	    left: -5px;
+	    right: -5px;
 	    bottom: 0;
 	}
 }

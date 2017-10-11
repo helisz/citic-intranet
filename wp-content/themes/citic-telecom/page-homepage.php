@@ -96,24 +96,27 @@ get_header(); ?>
 										</div>
 									</div>
 									<div class="newsblock-content m-t">
-										<div class="newsblock-date">
-											<div class="month">
-												<?php echo get_the_date('M'); ?>									
-											</div>
-											<div class="date tilt">
-												<?php echo get_the_date('d'); ?>	
+										<div class="newsblock-date m-b-xs">
+											<div class="date">
+												<?php echo get_the_date('Y-m-d'); ?>	
 											</div>
 										</div>
-										<div class="newsblock-title text-md">
-											<?php echo mb_strimwidth(get_the_title(), 0, 100, '...'); ?>
+										<div class="newsblock-title text-xl text-bold">
+											<?php echo mb_strimwidth(get_the_title(), 0, 80, '...'); ?>
 										</div>
+										<!-- <div class="newsblock-text text-lighter text-sm m-t-sm">
+											<?php 
+												$content = get_the_content();
+												echo mb_strimwidth(wp_strip_all_tags( get_the_content() ), 0, 200, '...'); 
+											?>
+										</div> -->
 									</div>
 								</div>
 							</div>
 						</a>
 					<?php endforeach; ?><?php wp_reset_postdata(); ?><?php endif;?>
 				</div>
-				<hr>
+				<!-- <hr> -->
 
 
 				<div class="section-wide row">
@@ -124,23 +127,16 @@ get_header(); ?>
 					if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();	?>
 					<div class="col-sm-6 m-b">					
 						<a href="<?php echo get_the_permalink(); ?>" >
-							<div class="slider-container">
-								<div class="newsblock slider-content">								
-									<div class="newsblock-content">
-										<div class="newsblock-date">
-											<div class="month">
-												<?php echo get_the_date('M'); ?>									
-											</div>
-											<div class="date tilt">
-												<?php echo get_the_date('d'); ?>	
-											</div>
-										</div>
-										<div class="newsblock-title text-sm">
-											<?php echo mb_strimwidth(get_the_title(), 0, 50, '...'); ?>
-										</div>
-									</div>
+							<div class="">
+								<div class="month text-uppercase text-xs">
+									<?php echo get_the_date('M'); ?>		
+									<span class="tilt date text-white m-l-xs text-xs"><?php echo get_the_date('d'); ?></span>	
 								</div>
 							</div>
+							<div class="newsblock-title text-sm">
+								<?php echo mb_strimwidth(get_the_title(), 0, 50, '...'); ?>
+							</div>
+									
 						</a>
 					</div>	<?php endwhile; endif; wp_reset_postdata(); ?>	 <!-- RESET GLOBAL $post VARIABLE -->
 				</div>
@@ -159,33 +155,29 @@ get_header(); ?>
 			<!-- RIGHT CONTENT -->
 			<div class="col-md-3">
 				<div class="section">
-					<div class="section-title">
-						<h2>重點新聞</h2>
-					</div>		
-					<div class="home-slider home-highlight">
+					<!-- <div class="section-title">
+						
+					</div>		 -->
+					<div class="home-slider bg-gray home-highlight">
 						<?php $post_objects = get_field('home_page_highlight_news');
 						if( $post_objects ): ?>
 						<?php foreach( $post_objects as $post):  ?>
 							<?php setup_postdata($post); ?>
 							<a href="<?php echo get_the_permalink(); ?>" >
 								<div class="slider-container">
-									<div class="newsblock slider-content">
+									<div class="newsblock outside slider-content">
 										<div class="newsblock-thumbnail-container">
 											<div class="newsblock-thumbnail image-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url( $thumb,'full' ); ?>) ">
 											</div>
+											<div class="newsblock-date text-xs">
+												<?php echo get_the_date('Y-m-d'); ?>	
+											</div>
 										</div>
-										<div class="newsblock-content m-t">
-											<div class="newsblock-date">
-												<div class="month">
-													<?php echo get_the_date('M'); ?>									
-												</div>
-												<div class="date tilt">
-													<?php echo get_the_date('d'); ?>	
-												</div>
+										<div class="newsblock-content-outside">
+											<div class="newsblock-title">
+												<?php echo mb_strimwidth(get_the_title(), 0, 100, '...'); ?>
 											</div>
-											<div class="newsblock-title text-sm">
-												<?php echo mb_strimwidth(get_the_title(), 0, 50, '...'); ?>
-											</div>
+											<div class="text-secondary m-t text-xs">重點新聞</div>
 										</div>
 									</div>
 								</div>
