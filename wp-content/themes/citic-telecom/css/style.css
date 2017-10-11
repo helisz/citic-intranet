@@ -26,7 +26,7 @@
   color: #d7000f !important; }
 
 body {
-  font-size: 12px; }
+  font-size: 14px; }
 
 hr {
   border-color: #263368;
@@ -121,6 +121,26 @@ a, button {
 
 .section, .section-wide {
   margin-bottom: 20px; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.vc-wrapper {
+  display: table;
+  height: 100%; }
+
+.vc-wrapper.full-height {
+  height: 100%; }
+
+.vc-wrapper.full-width {
+  width: 100%; }
+
+.vc-inside {
+  display: table-cell;
+  vertical-align: middle; }
 
 a, a * {
   outline: none !important;
@@ -317,6 +337,23 @@ a:hover, a *:hover {
 #main-nav.current-menu-item a, #main-nav #main-nav .current_page_item a, #main-nav #main-nav a:hover {
   color: #000;
   background: #ccc; }
+
+.language-switcher .qtranxs_widget {
+  margin: 0; }
+
+.language-switcher .qtranxs_widget ul {
+  margin: 0;
+  padding: 0; }
+
+.language-switcher .qtranxs_widget ul li {
+  padding: 0 10px 0 7px;
+  margin: 0px; }
+
+.language-switcher .qtranxs_widget ul li.active a, .language-switcher .qtranxs_widget ul li.active a:hover, .language-switcher .qtranxs_widget ul li.active a:visited, .language-switcher .qtranxs_widget ul li.active a:active, .language-switcher .qtranxs_widget ul li.active a * {
+  color: #d7000f; }
+
+.language-switcher .qtranxs_widget ul li:not(:last-child) {
+  border-right: 1px solid #8796d3; }
 
 #bottom {
   background: #263368;

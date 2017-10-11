@@ -36,9 +36,21 @@
 		</div>
 		
 		<div class="col-sm-8 mainmenu">
-			<div class="mobilenavi"></div>
+			<!-- <div class="mobilenavi"></div> -->
 			<!-- previous Main Navigation	 -->
 			<!-- <?php wp_nav_menu( array( 'container_id' => 'submenu', 'theme_location' => 'primary','container_class' => 'topmenu','menu_id'=>'topmenu' ,'menu_class'=>'sfmenu text-right' ) ); ?> -->
+
+			<div class="language-switcher vc-wrapper float-right">
+				<!-- Current Main Navigation -->
+				<div class="vc-inside">
+				<?php the_widget('qTranslateXWidget', array(
+					'type' => 'text', 
+					'hide-title' => true
+					)) 
+				?>
+				</div>
+			</div>
+	</div>
 		</div>
 		
 		</div> <!-- end row -->

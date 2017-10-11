@@ -1,6 +1,6 @@
 
 body{
-	font-size: 12px;
+	font-size: 14px;
 }
 
 hr{
@@ -82,6 +82,27 @@ a, button{
 }
 .section, .section-wide{
 	margin-bottom: 20px;
+}
+
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+.vc-wrapper {
+    display: table;
+    height: 100%;
+    &.full-height {
+        height: 100%;
+    }
+    &.full-width {
+        width: 100%;
+    }
+}
+.vc-inside{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 a, a *{
