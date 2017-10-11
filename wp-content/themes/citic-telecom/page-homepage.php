@@ -18,10 +18,35 @@ get_header(); ?>
 		<div class="row">
 
 			<!-- LEFT CONTENT -->
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<div class="section">
 					<div class="section-title">
 						<div class="bg-gray p-sm">
+							<div class="text-bold text-lg m-b text-primary">
+								<?php
+
+								if ( is_user_logged_in() ) {
+									    $time = date("H");
+									    $timezone = date("e");
+									    if ($time < "12") {
+									        echo "Good morning";
+									    } else
+									    if ($time >= "12" && $time < "17") {
+									        echo "Good afternoon";
+									    } else
+									    if ($time >= "17" && $time < "19") {
+									        echo "Good evening";
+									    } else							   
+									    if ($time >= "19") {
+									        echo "Good night";
+									    }								    
+									    $current_user = wp_get_current_user(); 
+								    	echo ', ' . $current_user->user_login ;
+								    }
+							    ?>
+
+							</div>							
+
 							<?php $date = new DateTime("now", new DateTimeZone('Asia/Hong_Kong') ); ?>
 							<div class="text-xs text-primary"><?php echo $date->format('Y'); ?> </div>
 							<div class="text-lg m-t-n-sm text-primary">
@@ -45,9 +70,9 @@ get_header(); ?>
 
 			<!-- CENTER AREA -->
 			<div class="col-md-6">
-				<div class="section-title">
+				<!-- <div class="section-title">
 					<h2>最新消息</h2>
-				</div>	
+				</div>	 -->
 				<div class="home-slider home-news m-b-lg">
 					<?php $post_objects = get_field('home_page_latest_news');
 					if( $post_objects ): ?>

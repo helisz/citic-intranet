@@ -22,6 +22,16 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
+
+
+<!-- breadcrumb -->
+<div class="breadcrumb">
+	<div class="container ">	
+		<?php echo do_shortcode( '[breadcrumb]' ); ?>
+	</div>
+</div>
+
+
 <div class="container">	
 	<div class="row">
 		<div id="primary" class="content-area col-sm-8">
