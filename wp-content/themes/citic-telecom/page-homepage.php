@@ -122,7 +122,7 @@ get_header(); ?>
 				<div class="section-wide row">
 					<?php 	
 					$portcat = 3;
-	 // $portcat =ft_of_get_option('fabthemes_portfolio');
+	 				// $portcat =ft_of_get_option('fabthemes_portfolio');
 					$query = new WP_Query( array( 'category_id' =>$portcat,'posts_per_page' =>4 ) );
 					if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();	?>
 					<div class="col-sm-6 m-b">					
@@ -134,7 +134,7 @@ get_header(); ?>
 								</div>
 							</div>
 							<div class="newsblock-title text-sm">
-								<?php echo mb_strimwidth(get_the_title(), 0, 50, '...'); ?>
+								<?php echo mb_strimwidth(get_the_title(), 0, 150, '...'); ?>
 							</div>
 									
 						</a>
@@ -166,7 +166,7 @@ get_header(); ?>
 							<a href="<?php echo get_the_permalink(); ?>" >
 								<div class="slider-container">
 									<div class="newsblock outside slider-content">
-										<div class="newsblock-thumbnail-container">
+										<div class="newsblock-thumbnail-container square">
 											<div class="newsblock-thumbnail image-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url( $thumb,'full' ); ?>) ">
 											</div>
 											<div class="newsblock-date text-xs">
@@ -174,7 +174,7 @@ get_header(); ?>
 											</div>
 										</div>
 										<div class="newsblock-content-outside">
-											<div class="newsblock-title">
+											<div class="newsblock-title text-md">
 												<?php echo mb_strimwidth(get_the_title(), 0, 100, '...'); ?>
 											</div>
 											<div class="text-secondary m-t text-xs">重點新聞</div>

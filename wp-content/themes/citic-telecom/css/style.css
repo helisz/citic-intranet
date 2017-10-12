@@ -201,7 +201,7 @@ a:hover, a *:hover {
 .newsblock .newsblock-thumbnail-container {
   width: 100%;
   padding-top: 56.25%;
-  /* 1:1 Aspect Ratio */
+  /* 16:9 Aspect Ratio */
   position: relative;
   /* If you want text inside of it */
   cursor: pointer; }
@@ -212,6 +212,10 @@ a:hover, a *:hover {
   left: 0;
   bottom: 0;
   right: 0; }
+
+.newsblock .newsblock-thumbnail-container.square {
+  padding-top: 75%;
+  /* 4:3 Aspect Ratio */ }
 
 .newsblock .newsblock-content {
   position: absolute;
