@@ -68,5 +68,5 @@
 
 	<?php if( is_page_template('homepage.php') ){ get_template_part( 'inc/feature' ); } ?>
 
-	<div id="content" class="site-content ">
+	<div id="content" class="site-content bg-gray">
 	

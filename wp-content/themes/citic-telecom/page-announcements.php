@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<div class="page-head">
+<!-- <div class="page-head">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -22,7 +22,7 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-
+ -->
 
 <!-- breadcrumb -->
 <div class="breadcrumb">

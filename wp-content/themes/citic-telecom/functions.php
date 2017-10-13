@@ -51,7 +51,7 @@ function web2feel_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-
+	add_image_size( 'admin-thumb', 50, 50, true ); // Hard Crop Mode
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
@@ -119,6 +119,11 @@ function web2feel_scripts() {
 	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20120206', true );
 	wp_enqueue_script( 'mobilemenu', get_template_directory_uri() . '/js/mobilemenu.js', array(), '20120206', true );
 	wp_enqueue_script( 'web2feel-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+
+	wp_enqueue_script( 'matchheight', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', array(), '20181010', true );
+
+
 
 	// Custom
 	wp_enqueue_style ('offset-theme-style', get_template_directory_uri().'/css/offset.css', array(), '1.0.0', "all");
