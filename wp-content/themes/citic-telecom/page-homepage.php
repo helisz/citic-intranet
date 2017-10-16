@@ -245,6 +245,15 @@ get_header(); ?>
 					
 				</div>
 
+				<div class="section">
+					<div class="section-title">
+						知識庫 CITIC Knowledge Base
+					</div>
+					<div class="section-content">
+						<?php kbe_search_form(); ?>
+					</div>
+				</div>
+
 
 
 				<div class="section">

@@ -50,7 +50,6 @@ jQuery(document).ready(function($){
 		        infinite: true,
 		      }
 		    },
-
 		    {
 		      breakpoint: 1024,
 		      settings: {
