@@ -35,6 +35,17 @@
 	}
 }
 
+
+.section-home-bk{
+	position: relative;
+	.bk-button{
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		right: 20px;
+	}
+}
+
 .slick-slider{
 	.slick-arrow{
 

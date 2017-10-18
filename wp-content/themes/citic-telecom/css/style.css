@@ -330,9 +330,11 @@ ul.slick-dots li:hover {
   z-index: 20;
   position: absolute;
   background-color: white;
-  width: 40px;
-  height: 100px;
-  background-size: 40px 100px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-size: 18px 20px;
+  background-repeat: no-repeat;
   background-position: center center;
   border: 1px solid #E3E3E3;
   -webkit-transition: all 0.3s ease-in-out;
@@ -355,7 +357,7 @@ ul.slick-dots li:hover {
   background-image: url("../../../../wp-content/uploads/arrow-r.png"); }
 
 .slick-slider .slick-arrow:hover, .slick-slider .slick-arrow:focus, .slick-slider .slick-arrow:visited {
-  background-size: 40px 100px;
+  background-size: 22px 26px;
   background-position: center center;
   background-color: white;
   border: 1px solid #E3E3E3; }
@@ -535,5 +537,14 @@ ul.slick-dots li:hover {
 
 .home-slider a:hover .text {
   color: #4158b3; }
+
+.section-home-bk {
+  position: relative; }
+
+.section-home-bk .bk-button {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  right: 20px; }
 
 /*# sourceMappingURL=maps/style.css.map */

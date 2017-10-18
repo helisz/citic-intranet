@@ -1,0 +1,221 @@
+.abcfTblFile{
+   border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+    background-color: #ffffff;
+}
+
+.abcfTblFile{
+    margin-top: 20px;
+}
+
+.abcfTblFile thead {
+    background-color: #e6e6e6;
+    font-weight: 600;
+    color: #000000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.abcfTblFile td, .abcfTblFile th{
+    border-left: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
+    border-width: 0 0 1px 1px;
+    margin: 0;
+    overflow: visible;
+}
+
+.abcfTblFile th {
+    font-size: 11px;
+    padding: 2px 4px 2px 4px;
+}
+
+.abcfTblFile td{
+    font-size: 12px;
+    padding: 2px 4px 2px 4px;
+}
+
+.abcfNoWrap, .abcfNoWrapTD td {
+    white-space: nowrap;
+}
+
+.abcfTblFile tr:nth-child(2n-1) th, .abcfTblFile tr:nth-child(2n-1) td {
+    background-color: #e6e6e6;
+}
+
+/*----------------------------------------*/
+.abcfTblMap{
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: none;
+    background-color: #ffffff;
+}
+
+.abcfTblMap{
+    border-top: 2px solid #999999;
+    border-bottom: 2px solid #999999;
+    margin-top: 20px;
+}
+
+.abcfTblMap td, .abcfTblMap th {
+    border-bottom: 1px solid #cbcbcb;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 1px 10px 1px 10px; /* cell padding */
+}
+
+.abcfTblMap td {
+    font-size: 13px;
+}
+
+.abcfTblMap tr:nth-child(2n-1) td {
+    background-color: #e6e6e6;
+}
+
+.abcfTblMap tr.buba td {
+    background-color: #999999;
+    font-size: 1px;
+    padding: 1px;
+    line-height: 1px;
+}
+/*----------------------------------------*/
+.abcfTblImport{
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+    background-color: #ffffff;
+}
+
+.abcfTblImport{
+    border-top: 2px solid #999999;
+    border-bottom: 2px solid #999999;
+    margin-top: 10px;
+}
+
+.abcfTblImport td, .abcfTblImport th {
+    border-left: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+}
+
+.abcfTblImport th {
+    font-weight: 600;
+    padding: 5px 4px 5px 4px;
+    font-size: 12px;
+}
+
+.abcfTblImport td {
+    padding: 2px 4px 3px 4px;;
+    font-size: 13px;
+}
+
+.abcfTblImportPost {
+    background-color: #e6e6e6;
+}
+
+/*----------------------------------------*/
+.pure-table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+
+.pure-table caption {
+    color: #000;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+.pure-table td,
+.pure-table th {
+    border-left: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
+    border-width: 0 0 1px 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 0.3em 0.3em; /* cell padding */
+}
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
+.pure-table td:first-child,
+.pure-table th:first-child {
+    border-left-width: 0;
+}
+
+.pure-table thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+
+/* nth-child selector for modern browsers */
+.pure-table-striped tr:nth-child(2n-1) td {
+    background-color: #f2f2f2;
+}
+
+.abcfStriped > tbody > *:nth-child(2n+1) {
+    background-color: #ffffff;
+}
+
+/* ----------------------------------------------- */
+  .ui-progressbar {
+    position: relative;
+  }
+  .progress-label {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    font-weight: 600;
+color: #000000;
+  }
+
+.abcfslcHide{ display: none; }
+.abcfslcShow{display: block;}
+
+.abcfslcNotice {
+	background: #fff;
+	border-left: 4px solid #fff;
+	-webkit-box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, 0.1 );
+	box-shadow: 0 1px 1px 0 rgba( 0, 0, 0, 0.1 );
+	margin: 5px 0 15px;
+	padding: 1px 12px;
+}
+
+.abcfslcNotice p {
+	margin: 0.5em 0;
+	padding: 2px;
+}
+
+.abcfslcNoticeOK {
+    border-left-color: #46b450;
+}
+
+.abcfslcNoticeKO{
+	border-left-color: #dc3232;
+}
+
+.abcfslcNoticeInfo{
+	border-left-color: #0066cc;
+}
+
+
+img.abcfslcImgCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }

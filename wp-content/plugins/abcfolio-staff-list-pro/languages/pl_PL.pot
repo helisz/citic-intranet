@@ -1,0 +1,1160 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Staff List Pro\n"
+"POT-Creation-Date: 2016-05-30 13:19-0600\n"
+"PO-Revision-Date: 2016-05-30 13:20-0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: admin/admin-scripts.php:55
+msgid "Staff Image"
+msgstr ""
+
+#: admin/admin-scripts.php:56
+msgid "Choose Image"
+msgstr ""
+
+#: admin/txt-admin.php:14
+msgid "Help"
+msgstr ""
+
+#: admin/txt-admin.php:17
+msgid "Images"
+msgstr ""
+
+#: admin/txt-admin.php:20
+msgid "Shortcode"
+msgstr ""
+
+#: admin/txt-admin.php:23
+msgid "Uninstall"
+msgstr ""
+
+#: admin/txt-admin.php:26
+#, fuzzy
+msgid "Yes"
+msgstr "Tak"
+
+#: admin/txt-admin.php:29
+msgid "No"
+msgstr ""
+
+#: admin/txt-admin.php:32
+msgid "Default"
+msgstr ""
+
+#: admin/txt-admin.php:35
+msgid "License"
+msgstr ""
+
+#: admin/txt-admin.php:38
+#, fuzzy
+msgid "Options"
+msgstr "Opcje"
+
+#: admin/txt-admin.php:41
+msgid "Font Size"
+msgstr ""
+
+#: admin/txt-admin.php:44
+msgid "Documentation"
+msgstr ""
+
+#: admin/txt-admin.php:47
+msgid "Admin"
+msgstr ""
+
+#: admin/txt-admin.php:50
+msgid "Layout"
+msgstr ""
+
+#: admin/txt-admin.php:53
+msgid "Width"
+msgstr ""
+
+#: admin/txt-admin.php:56
+msgid "Top Margin"
+msgstr ""
+
+#: admin/txt-admin.php:59
+msgid "Left Margin"
+msgstr ""
+
+#: admin/txt-admin.php:62
+msgid "Album"
+msgstr ""
+
+#: admin/txt-admin.php:65
+msgid "Image Collection"
+msgstr ""
+
+#: admin/txt-admin.php:68
+msgid "Template Options"
+msgstr ""
+
+#: admin/txt-admin.php:71 admin/txt-admin.php:250
+msgid "Custom"
+msgstr ""
+
+#: admin/txt-admin.php:75
+msgid "Activate Key"
+msgstr ""
+
+#: admin/txt-admin.php:78
+msgid "License Key"
+msgstr ""
+
+#: admin/txt-admin.php:81
+msgid "Add Defaults"
+msgstr ""
+
+#: admin/txt-admin.php:84
+msgid "Support"
+msgstr ""
+
+#: admin/txt-admin.php:87
+msgid "Caption"
+msgstr ""
+
+#: admin/txt-admin.php:90
+msgid "License & Help"
+msgstr ""
+
+#: admin/txt-admin.php:93 admin/txt-admin.php:143
+msgid "Image"
+msgstr ""
+
+#: admin/txt-admin.php:96
+msgid "Description"
+msgstr ""
+
+#: admin/txt-admin.php:99 admin/txt-admin.php:244
+msgid "Title"
+msgstr ""
+
+#: admin/txt-admin.php:103
+msgid "Open Graph Tags"
+msgstr ""
+
+#: admin/txt-admin.php:106
+msgid "Original"
+msgstr ""
+
+#: admin/txt-admin.php:109
+msgid "Large"
+msgstr ""
+
+#: admin/txt-admin.php:112
+msgid "Medium"
+msgstr ""
+
+#: admin/txt-admin.php:115
+msgid "Small"
+msgstr ""
+
+#: admin/txt-admin.php:118
+msgid "Thumbnails"
+msgstr ""
+
+#: admin/txt-admin.php:121
+msgid "Image Size"
+msgstr ""
+
+#: admin/txt-admin.php:124
+msgid "Max Image Height"
+msgstr ""
+
+#: admin/txt-admin.php:127
+msgid "Single Line Text"
+msgstr ""
+
+#: admin/txt-admin.php:130
+msgid "Custom Text"
+msgstr ""
+
+#: admin/txt-admin.php:134
+msgid "Border"
+msgstr ""
+
+#: admin/txt-admin.php:137
+msgid "Underline"
+msgstr ""
+
+#: admin/txt-admin.php:140
+msgid "Highlight"
+msgstr ""
+
+#: admin/txt-admin.php:146
+msgid "None"
+msgstr ""
+
+#: admin/txt-admin.php:149
+msgid "Menu Items"
+msgstr ""
+
+#: admin/txt-admin.php:152
+msgid "Menu Items Left/Right Margins"
+msgstr ""
+
+#: admin/txt-admin.php:155
+msgid "Font"
+msgstr ""
+
+#: admin/txt-admin.php:158
+#, fuzzy
+msgid "Container Width"
+msgstr "Kontener Grid - Szerokość"
+
+#: admin/txt-admin.php:161
+msgid "Center Items"
+msgstr ""
+
+#: admin/txt-admin.php:167
+msgid "Social"
+msgstr ""
+
+#: admin/txt-admin.php:170
+msgid "Show Links"
+msgstr ""
+
+#: admin/txt-admin.php:173
+msgid "Social Media Links (Icons)"
+msgstr ""
+
+#: admin/txt-admin.php:176
+msgid "Icons"
+msgstr ""
+
+#: admin/txt-admin.php:179
+msgid "Utilities"
+msgstr ""
+
+#: admin/txt-admin.php:182
+msgid "Categories"
+msgstr ""
+
+#: admin/txt-admin.php:185
+msgid "Staff List Pro"
+msgstr ""
+
+#: admin/txt-admin.php:188
+msgid "Staff List"
+msgstr ""
+
+#: admin/txt-admin.php:192
+msgid "Manual"
+msgstr ""
+
+#: admin/txt-admin.php:195
+msgid "Sort Text"
+msgstr ""
+
+#: admin/txt-admin.php:198
+msgid "Custom Link"
+msgstr ""
+
+#: admin/txt-admin.php:201 inc/post-types.php:16 inc/post-types.php:17
+msgid "Staff Template"
+msgstr ""
+
+#: admin/txt-admin.php:204
+msgid "Field Order - Staff"
+msgstr ""
+
+#: admin/txt-admin.php:207
+msgid "Field Order - Single"
+msgstr ""
+
+#: admin/txt-admin.php:210
+msgid "Layout - Staff"
+msgstr ""
+
+#: admin/txt-admin.php:213
+msgid "Layout - Single"
+msgstr ""
+
+#: admin/txt-admin.php:216 admin/txt-admin.php:235 admin/txt-admin.php:662
+msgid "Staff Page"
+msgstr ""
+
+#: admin/txt-admin.php:219
+msgid "Single Page"
+msgstr ""
+
+#: admin/txt-admin.php:223
+msgid "Staff Page + Single Page"
+msgstr ""
+
+#: admin/txt-admin.php:226
+msgid "Hide/Delete"
+msgstr ""
+
+#: admin/txt-admin.php:229
+msgid "Show On"
+msgstr ""
+
+#: admin/txt-admin.php:232
+msgid "Text Editor "
+msgstr ""
+
+#: admin/txt-admin.php:238
+msgid "Left-Right Margins"
+msgstr ""
+
+#: admin/txt-admin.php:241
+msgid "Hide"
+msgstr ""
+
+#: admin/txt-admin.php:247
+msgid "Instructions"
+msgstr ""
+
+#: admin/txt-admin.php:254
+msgid "Sort Type"
+msgstr ""
+
+#: admin/txt-admin.php:257
+msgid "Text Style"
+msgstr ""
+
+#: admin/txt-admin.php:260
+msgid "Hyperlink"
+msgstr ""
+
+#: admin/txt-admin.php:263
+msgid "Center Container"
+msgstr ""
+
+#: admin/txt-admin.php:266
+msgid "Center Image Horizontally"
+msgstr ""
+
+#: admin/txt-admin.php:269
+msgid "Default: 1%"
+msgstr ""
+
+#: admin/txt-admin.php:272
+msgid "Paragraph Text"
+msgstr ""
+
+#: admin/txt-admin.php:275
+msgid "Staff Page Category"
+msgstr ""
+
+#: admin/txt-admin.php:278
+msgid "Menu Container"
+msgstr ""
+
+#: admin/txt-admin.php:281
+msgid "Bottom Margin"
+msgstr ""
+
+#: admin/txt-admin.php:285
+msgid "Menu Item"
+msgstr ""
+
+#: admin/txt-admin.php:288
+msgid "Font Color"
+msgstr ""
+
+#: admin/txt-admin.php:291
+msgid "Active Item Decoration"
+msgstr ""
+
+#: admin/txt-admin.php:294
+msgid "Uppercase"
+msgstr ""
+
+#: admin/txt-admin.php:297
+msgid "Staff Page URL"
+msgstr ""
+
+#: admin/txt-admin.php:300
+msgid "Text of First Menu Item"
+msgstr ""
+
+#: admin/txt-admin.php:303
+msgid "Category Slug"
+msgstr ""
+
+#: admin/txt-admin.php:306
+msgid "Gray"
+msgstr ""
+
+#: admin/txt-admin.php:309
+msgid "Dark Gray"
+msgstr ""
+
+#: admin/txt-admin.php:312
+msgid "Black"
+msgstr ""
+
+#: admin/txt-admin.php:315
+msgid "Menu"
+msgstr ""
+
+#: admin/txt-admin.php:319
+msgid ""
+"Valid data entry formats for Width or Margins: 15, 15px, 15%, 1em. Blank (no "
+"entry) = default value."
+msgstr ""
+
+#: admin/txt-admin.php:322
+msgid "Default: 100%."
+msgstr ""
+
+#: admin/txt-admin.php:325
+#, php-format
+msgid "Default: 100% of the parent container."
+msgstr ""
+
+#: admin/txt-admin.php:328
+msgid "Default: 0 (zero pixels)."
+msgstr ""
+
+#: admin/txt-admin.php:331
+msgid "Blank (no entry) = default value."
+msgstr ""
+
+#: admin/txt-admin.php:334
+msgid "Page you want to add Categories Menu to."
+msgstr ""
+
+#: admin/txt-admin.php:337
+msgid ""
+"Optional. Highlighted when the page opens. It is usually used to show all "
+"records."
+msgstr ""
+
+#: admin/txt-admin.php:340
+msgid "If empty, first category will show up as a first item."
+msgstr ""
+
+#: admin/txt-admin.php:343
+msgid "Other Menu Items"
+msgstr ""
+
+#: admin/txt-admin.php:346
+msgid ""
+"To create menu items add categoty slugs. Menu will display matching category "
+"names."
+msgstr ""
+
+#: admin/txt-admin.php:349
+msgid "First Menu Item"
+msgstr ""
+
+#: admin/txt-admin.php:353
+msgid ""
+"Email link requires two input fields: <b>link text</b>  and <b>email adress</"
+"b>."
+msgstr ""
+
+#: admin/txt-admin.php:356
+msgid "Email address is the email address of the intended recipient"
+msgstr ""
+
+#: admin/txt-admin.php:359
+msgid "Custom Styles"
+msgstr ""
+
+#: admin/txt-admin.php:362
+msgid "Default: "
+msgstr ""
+
+#: admin/txt-admin.php:365
+msgid "Select Field Type"
+msgstr ""
+
+#: admin/txt-admin.php:368
+msgid "Field Label (link text)"
+msgstr ""
+
+#: admin/txt-admin.php:371
+msgid "Static Label & Text"
+msgstr ""
+
+#: admin/txt-admin.php:374
+msgid "This template has no social links activated."
+msgstr ""
+
+#: admin/txt-admin.php:377
+msgid "Field Label"
+msgstr ""
+
+#: admin/txt-admin.php:380
+msgid "Field Description"
+msgstr ""
+
+#: admin/txt-admin.php:383
+msgid "Single Staff Member page is optional."
+msgstr ""
+
+#: admin/txt-admin.php:386
+msgid "Field Container Custom CSS Class"
+msgstr ""
+
+#: admin/txt-admin.php:389
+msgid ""
+"What type of content the field will contain: text, hyperlink, email etc."
+msgstr ""
+
+#: admin/txt-admin.php:392
+msgid "Staff List Layout"
+msgstr ""
+
+#: admin/txt-admin.php:395
+msgid "Template has no fields."
+msgstr ""
+
+#: admin/txt-admin.php:398
+msgid "List. Image left, text right."
+msgstr ""
+
+#: admin/txt-admin.php:401
+msgid "Custom Links"
+msgstr ""
+
+#: admin/txt-admin.php:404
+msgid "Input Fields"
+msgstr ""
+
+#: admin/txt-admin.php:407
+msgid "List. Image top, text bottom."
+msgstr ""
+
+#: admin/txt-admin.php:410
+msgid "Enter the URL of social media accounts."
+msgstr ""
+
+#: admin/txt-admin.php:413
+msgid "Grid. Image top, text bottom."
+msgstr ""
+
+#: admin/txt-admin.php:416
+msgid " Supports HTML tags: <strong>b, br, em, i, strong.</strong> "
+msgstr ""
+
+#: admin/txt-admin.php:419
+msgid "Field Type"
+msgstr ""
+
+#: admin/txt-admin.php:422
+msgid ""
+"Optional. Enter the CSS class name you would like to use in order to "
+"override the default styles for this field."
+msgstr ""
+
+#: admin/txt-admin.php:425
+msgid ""
+"Optional. Enter the CSS style you would like to use in order to override the "
+"default styles for this field."
+msgstr ""
+
+#: admin/txt-admin.php:428
+msgid "4. Repeat the above steps for all staff member records."
+msgstr ""
+
+#: admin/txt-admin.php:431
+msgid "Static Label Style"
+msgstr ""
+
+#: admin/txt-admin.php:434
+msgid "Text displayed on top of the data entry form."
+msgstr ""
+
+#: admin/txt-admin.php:437
+msgid "1px image border. Default: your theme settings."
+msgstr ""
+
+#: admin/txt-admin.php:440
+msgid "Static Label and Hyperlink"
+msgstr ""
+
+#: admin/txt-admin.php:443
+msgid "Hyperlink requires two input fields: <b>link text</b>  and <b>href</b>."
+msgstr ""
+
+#: admin/txt-admin.php:446
+msgid ""
+"The <b>href</b> specifies the URL (destination address) of the page the link "
+"goes to."
+msgstr ""
+
+#: admin/txt-admin.php:449
+msgid "The <b>link text</b> is the visible part displayed on the page."
+msgstr ""
+
+#: admin/txt-admin.php:452
+msgid "Select page the field will show up. You can also hide or delete field."
+msgstr ""
+
+#: admin/txt-admin.php:455
+msgid ""
+"To create a page filtered by category, use Staff Page Category shortcode. "
+"Replace the word 'slug' with category slug (see Staff Categories)."
+msgstr ""
+
+#: admin/txt-admin.php:458
+msgid "Set up how and what data is displayed on Staff and Single Staff pages."
+msgstr ""
+
+#: admin/txt-admin.php:461
+msgid ""
+"Enter an icon name. Example: Tumblr. It has to match exactly the icon name."
+msgstr ""
+
+#: admin/txt-admin.php:464
+msgid "Select Staff Members sort type."
+msgstr ""
+
+#: admin/txt-admin.php:467
+msgid "Icons Container Style"
+msgstr ""
+
+#: admin/txt-admin.php:470
+msgid "Data Entry Form Title & Instructions"
+msgstr ""
+
+#: admin/txt-admin.php:473
+msgid "Single Staff Page"
+msgstr ""
+
+#: admin/txt-admin.php:476
+msgid "Create Demo Records"
+msgstr ""
+
+#: admin/txt-admin.php:479
+msgid "How to create and publish Staff pages"
+msgstr ""
+
+#: admin/txt-admin.php:482
+msgid ""
+"The other option is to create text hyperlink with URL parameter "
+"<strong>slpcat</strong>"
+msgstr ""
+
+#: admin/txt-admin.php:485
+msgid "Select Template"
+msgstr ""
+
+#: admin/txt-admin.php:488
+msgid "Field Description (link text)"
+msgstr ""
+
+#: admin/txt-admin.php:491
+msgid ""
+"Provide the user some direction on how the fields should be filled out. "
+"Default: "
+msgstr ""
+
+#: admin/txt-admin.php:494
+msgid "Default = Font used by your theme."
+msgstr ""
+
+#: admin/txt-admin.php:497
+msgid "Visual Assistance"
+msgstr ""
+
+#: admin/txt-admin.php:500
+msgid ""
+"Optional. Show item borders to assist with laying out content. Set it to No "
+"when done."
+msgstr ""
+
+#: admin/txt-admin.php:503
+msgid "Item Columns - Width"
+msgstr ""
+
+#: admin/txt-admin.php:506
+msgid "Text Container"
+msgstr ""
+
+#: admin/txt-admin.php:509
+msgid "Default style: <b>abcfslPadLPc5</b> (padding left 5%)"
+msgstr ""
+
+#: admin/txt-admin.php:512
+msgid "Left Column Width - Right Column Width"
+msgstr ""
+
+#: admin/txt-admin.php:515
+msgid "Default: Padding top 5%."
+msgstr ""
+
+#: admin/txt-admin.php:518
+msgid "Simply drag the items up or down and they will be saved in that order."
+msgstr ""
+
+#: admin/txt-admin.php:521
+msgid "Hyperlink with Static Text"
+msgstr ""
+
+#: admin/txt-admin.php:524
+msgid ""
+"Optional. Enter the description for the form field. This will provide the "
+"user some direction on how the field should be filled out."
+msgstr ""
+
+#: admin/txt-admin.php:527
+msgid "Hyperlink Style"
+msgstr ""
+
+#: admin/txt-admin.php:530
+msgid "Link Static Text"
+msgstr ""
+
+#: admin/txt-admin.php:533
+msgid ""
+"Optional. Default: 100%. Valid formats: px, %. Example: 15px, 15%. No entry "
+"= default value."
+msgstr ""
+
+#: admin/txt-admin.php:536
+msgid "Image Link"
+msgstr ""
+
+#: admin/txt-admin.php:539
+msgid ""
+"To create link to a Single Page enter <span class=\"abcflFontFV abcflFontS12 "
+"abcflFontW700\">SP</span>. For other links enter URL."
+msgstr ""
+
+#: admin/txt-admin.php:542
+msgid "Select Image"
+msgstr ""
+
+#: admin/txt-admin.php:545
+msgid ""
+"Enter the text to display as link text. The same text is used for all "
+"hyperlinks."
+msgstr ""
+
+#: admin/txt-admin.php:548
+msgid "Field Container Style"
+msgstr ""
+
+#: admin/txt-admin.php:551
+msgid ""
+"No list items found. There maybe no items or none of the existing items is "
+"linked to this template."
+msgstr ""
+
+#: admin/txt-admin.php:554
+msgid "Swiching templates may cause loss of data."
+msgstr ""
+
+#: admin/txt-admin.php:557
+msgid "Staff Member Data"
+msgstr ""
+
+#: admin/txt-admin.php:560
+msgid ""
+"Optional. Text to sort staff members by. Leave empty if you'll sort staff "
+"list manually."
+msgstr ""
+
+#: admin/txt-admin.php:563
+msgid "Show Advanced Options"
+msgstr ""
+
+#: admin/txt-admin.php:566
+msgid "Single Page URL"
+msgstr ""
+
+#: admin/txt-admin.php:569
+msgid "1. Create a new Post or Page."
+msgstr ""
+
+#: admin/txt-admin.php:572
+msgid ""
+"2. Copy <b>Single Page</b> shortcode (from above) and paste it into the Post "
+"or Page content editor."
+msgstr ""
+
+#: admin/txt-admin.php:575
+msgid "3. Save the page."
+msgstr ""
+
+#: admin/txt-admin.php:578
+msgid "4. Open the newly created page."
+msgstr ""
+
+#: admin/txt-admin.php:581
+msgid "6. Copy page's URL from the address bar."
+msgstr ""
+
+#: admin/txt-admin.php:584
+msgid "7. Paste it into Single Page URL field (below)."
+msgstr ""
+
+#: admin/txt-admin.php:587
+msgid "Text Container Width = Image Width"
+msgstr ""
+
+#: admin/txt-admin.php:590
+msgid "Default: DIV. Select HTML tag for field content."
+msgstr ""
+
+#: admin/txt-admin.php:593
+msgid "Staff Order"
+msgstr ""
+
+#: admin/txt-admin.php:596
+msgid ""
+"Staff Members will be sorted in ascending alphabetical order, according to "
+"the Sort Text (added on Staff Member screen)."
+msgstr ""
+
+#: admin/txt-admin.php:599
+msgid ""
+"Enter the label of the form field. This is the field title the user will see "
+"when filling out the form."
+msgstr ""
+
+#: admin/txt-admin.php:602
+msgid "Example: <strong>http://example.com/staff-page/?slpcat=slug</strong>"
+msgstr ""
+
+#: admin/txt-admin.php:605
+msgid ""
+"To use the same image for Staff Page and Single Page enter <span class="
+"\"abcflFontFV abcflFontS12 abcflFontW700\">SP</span>."
+msgstr ""
+
+#: admin/txt-admin.php:608
+msgid "Field ID.&nbsp;&nbsp;Field type."
+msgstr ""
+
+#: admin/txt-admin.php:611
+msgid "Field Display Options"
+msgstr ""
+
+#: admin/txt-admin.php:614
+msgid "Field HTML Tag."
+msgstr ""
+
+#: admin/txt-admin.php:617
+msgid "Demo"
+msgstr ""
+
+#: admin/txt-admin.php:620
+msgid "Custom Inline Style "
+msgstr ""
+
+#: admin/txt-admin.php:623
+msgid "Email"
+msgstr ""
+
+#: admin/txt-admin.php:626
+msgid "Field ID"
+msgstr ""
+
+#: admin/txt-admin.php:629
+msgid "Static Label Text"
+msgstr ""
+
+#: admin/txt-admin.php:632
+msgid ""
+"Text to display next to data entered by the user. <b>Example:</b> Phone:"
+msgstr ""
+
+#: admin/txt-admin.php:635
+msgid "Demo Records"
+msgstr ""
+
+#: admin/txt-admin.php:638
+msgid ""
+"Select: <b>Yes</b> to horizontally center content container when width is "
+">100%."
+msgstr ""
+
+#: admin/txt-admin.php:641
+msgid "Lock template to prevent accidental changes."
+msgstr ""
+
+#: admin/txt-admin.php:644
+msgid "Template Locked. Editing disabeld."
+msgstr ""
+
+#: admin/txt-admin.php:647
+msgid ""
+"5. You should see a blank page. Check documentation for more info on how the "
+"single page works."
+msgstr ""
+
+#: admin/txt-admin.php:650
+msgid "Are you going to create Single Staff Member Page?"
+msgstr ""
+
+#: admin/txt-admin.php:653
+msgid "Field Label (email adress)"
+msgstr ""
+
+#: admin/txt-admin.php:656
+msgid "Staff Member Container"
+msgstr ""
+
+#: admin/txt-admin.php:659
+msgid "Field Label (href)"
+msgstr ""
+
+#: admin/txt-admin.php:665
+msgid ""
+"2. Copy <b>Staff Page</b> shortcode (from above) and paste it into the Post "
+"or Page content editor."
+msgstr ""
+
+#: admin/txt-admin.php:668
+msgid "Page to display staff members (list or grid)."
+msgstr ""
+
+#: admin/txt-admin.php:671
+msgid "Page to display record of a single staff member."
+msgstr ""
+
+#: admin/txt-admin.php:674
+msgid "Default: 40 pixels."
+msgstr ""
+
+#: admin/txt-admin.php:677
+msgid ""
+"Container has 12 sections of equal width. Select how many you want to use "
+"for left and right columns."
+msgstr ""
+
+#: admin/txt-admin.php:680
+msgid ""
+"Optional. Text container can span the width of the column or be limited to "
+"width of the image."
+msgstr ""
+
+#: admin/txt-admin.php:683
+msgid "Image: Staff Page"
+msgstr ""
+
+#: admin/txt-admin.php:686
+msgid "Image: Single Page"
+msgstr ""
+
+#: admin/txt-admin.php:689
+msgid "Image URL"
+msgstr ""
+
+#: admin/txt-admin.php:692
+msgid "Number of columns"
+msgstr ""
+
+#: admin/txt-admin.php:695
+msgid "The number of columns in a row."
+msgstr ""
+
+#: admin/txt-admin.php:698
+msgid "How to add category menu to staff page."
+msgstr ""
+
+#: admin/txt-admin.php:704
+msgid "Field Description (href)"
+msgstr ""
+
+#: admin/txt-admin.php:710
+msgid "Data Entry Options"
+msgstr ""
+
+#: admin/txt-admin.php:713
+msgid "Add a New Field"
+msgstr ""
+
+#: admin/txt-admin.php:716
+msgid "Delete Field"
+msgstr ""
+
+#: admin/txt-admin.php:719
+msgid ""
+"Layout:  Two columns. Image left, text right. Displays single staff member."
+msgstr ""
+
+#: admin/txt-admin.php:722
+msgid "Custom CSS Class"
+msgstr ""
+
+#: admin/txt-admin.php:725
+msgid "Horizontal Line"
+msgstr ""
+
+#: admin/txt-admin.php:728
+msgid "Both Staff Member and Staff List pages use the same template and data."
+msgstr ""
+
+#: admin/txt-admin.php:734
+msgid "You can't delete this template. It's used by one or more staff members."
+msgstr ""
+
+#: admin/txt-admin.php:737
+msgid "Example: [abcf-staff-grid id=\"5586\" category=\"faculty\"]"
+msgstr ""
+
+#: admin/txt-admin.php:740
+msgid "How link Staff page to a Single Page."
+msgstr ""
+
+#: admin/txt-admin.php:743
+msgid "1. Open Staff Member data entry form."
+msgstr ""
+
+#: admin/txt-admin.php:746
+msgid ""
+"2. To link staff member image to a single page enter <span class="
+"\"abcflFontFV abcflFontS12 abcflFontW700\">SP</span> as Image Link."
+msgstr ""
+
+#: admin/txt-admin.php:749
+msgid ""
+"3. For text hyperlinks enter <span class=\"abcflFontFV abcflFontS12 "
+"abcflFontW700\">SP</span> as link URL."
+msgstr ""
+
+#: admin/txt-admin.php:753
+msgid ""
+"3.  Copy page's URL from the address bar and paste it into Staff Page URL "
+"field (above)."
+msgstr ""
+
+#: admin/txt-admin.php:756
+msgid "1. Create a staff page if not already created."
+msgstr ""
+
+#: admin/txt-admin.php:759
+msgid "4. Open the staff page for edit. "
+msgstr ""
+
+#: admin/txt-admin.php:762
+msgid ""
+"5. Copy menu shortcode and paste it into the page content editor, above the "
+"Staff Page shortcode."
+msgstr ""
+
+#: admin/txt-admin.php:765
+msgid "6. You can add title or any other text above and between the shortcodes"
+msgstr ""
+
+#: admin/txt-admin.php:768
+msgid "7. Save the page."
+msgstr ""
+
+#: admin/txt-admin.php:771
+msgid "8. Open the page for preview."
+msgstr ""
+
+#: admin/txt-admin.php:774
+msgid "9. Test category menu."
+msgstr ""
+
+#: admin/txt-admin.php:777
+msgid "2. Open the staff page for preview."
+msgstr ""
+
+#: inc/post-types.php:13
+msgid "Menu Staff"
+msgstr ""
+
+#: inc/post-types.php:14 inc/post-types.php:19
+msgid "Staff Templates"
+msgstr ""
+
+#: inc/post-types.php:15 inc/post-types.php:43 inc/post-types.php:70
+#, fuzzy
+msgid "Add New"
+msgstr "Dodaj Nowy"
+
+#: inc/post-types.php:18 inc/post-types.php:46 inc/post-types.php:73
+#, fuzzy
+msgid "New"
+msgstr "Nowy"
+
+#: inc/post-types.php:20 inc/post-types.php:48 inc/post-types.php:75
+#, fuzzy
+msgid "Search"
+msgstr "Szukaj"
+
+#: inc/post-types.php:21 inc/post-types.php:49 inc/post-types.php:76
+msgid "No records found"
+msgstr ""
+
+#: inc/post-types.php:22 inc/post-types.php:50 inc/post-types.php:77
+msgid "No records found in the Trash"
+msgstr ""
+
+#: inc/post-types.php:42 inc/post-types.php:47
+msgid "Staff Members"
+msgstr ""
+
+#: inc/post-types.php:44 inc/post-types.php:45
+msgid "Staff Member"
+msgstr ""
+
+#: inc/post-types.php:69 inc/post-types.php:74
+msgid "Category Menus"
+msgstr ""
+
+#: inc/post-types.php:71 inc/post-types.php:72
+msgid "Category Menu"
+msgstr ""
+
+#: inc/post-types.php:103
+msgid "Search Staff Category"
+msgstr ""
+
+#: inc/post-types.php:104
+msgid "Staff Categories"
+msgstr ""
+
+#: inc/post-types.php:105
+msgid "Parent Category"
+msgstr ""
+
+#: inc/post-types.php:106
+msgid "Parent Category:"
+msgstr ""
+
+#: inc/post-types.php:107
+msgid "Edit Staff Category"
+msgstr ""
+
+#: inc/post-types.php:108
+msgid "Update Staff Category"
+msgstr ""
+
+#: inc/post-types.php:109
+msgid "Add Staff Category"
+msgstr ""
+
+#: inc/post-types.php:110
+msgid "New Staff Category Name"
+msgstr ""
+
+#: library/abcfl-license.php:36 library/utility-all.php:65
+msgid "The license key is required for automated updates."
+msgstr ""
+
+#: library/abcfl-license.php:39 library/utility-all.php:68
+msgid ""
+"Lost your key? No problem. <a href=\"http://abcfolio.com/quality-wordpress-"
+"plugins-contact-us/\">Contact us to get your License Key.</a>"
+msgstr ""
+
+#: staff-list.php:62 staff-list.php:67
+msgid "Cheatin&#8217; huh?"
+msgstr ""

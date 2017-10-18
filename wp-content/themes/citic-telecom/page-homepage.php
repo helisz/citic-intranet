@@ -76,7 +76,7 @@ get_header(); ?>
 						通讯录 CONTACTS
 					</div>
 					<div class="section-content p-sm">
-						(empty)
+						<!-- <?php echo do_shortcode('[abcf-staff-list id="195"]'); ?> -->
 					</div>
 				</div>
 
@@ -245,12 +245,15 @@ get_header(); ?>
 					
 				</div>
 
-				<div class="section">
-					<div class="section-title">
+				<div class="section section-home-bk">
+					<!-- <div class="section-title">
 						知識庫 CITIC Knowledge Base
-					</div>
+					</div> -->
 					<div class="section-content">
-						<?php kbe_search_form(); ?>
+						<img src="wp-content/uploads/kb-home-bg.png">
+						<a href="citic-pedia" class="bk-button btn btn-primary">
+							ENTER
+						</a>
 					</div>
 				</div>
 

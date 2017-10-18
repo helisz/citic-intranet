@@ -321,9 +321,11 @@ ul.slick-dots{
 		z-index: 20;
 		position: absolute;
 		background-color: white;
-		width: 40px;
-		height: 100px;
-		background-size: 40px 100px;
+		width: 30px;
+	    height: 30px;
+	    border-radius: 100px;
+	    background-size: 18px 20px;
+	    background-repeat: no-repeat;
 		background-position: center center;	
 		border: 1px solid $border-color;		
 		@include transition(all 0.3s ease-in-out);
@@ -342,7 +344,7 @@ ul.slick-dots{
 			background-image: url("../../../../wp-content/uploads/arrow-r.png");
 		}
 		&:hover, &:focus, &:visited{
-			background-size: 40px 100px;
+	    	background-size: 22px 26px;
 			background-position: center center;
 			background-color: white;
 			border: 1px solid $border-color;		
