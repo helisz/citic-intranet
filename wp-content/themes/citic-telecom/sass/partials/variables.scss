@@ -1,4 +1,6 @@
 // DEFINITIONS
+$radius: 5px !default;
+
 $gray: #F4F4F4 !default;
 $bg-color: $gray !default;
 
@@ -28,7 +30,7 @@ $border-color: #E3E3E3 !default;
 	background-color: white;
 }
 .bg-primary{
-	background-color: $primary-color;
+	background-color: $primary-color !important;
 }
 .bg-secondary{
 	background-color: $secondary-color;
