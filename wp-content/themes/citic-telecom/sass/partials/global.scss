@@ -33,7 +33,7 @@ hr{
 
 	.section-title{
 		// background: white;
-		font-size: 12px;
+		font-size: 0.8em;
 		padding: 10px 15px;
 		font-weight: bold;
 		// color: $primary-color;
@@ -56,6 +56,7 @@ a, button{
 	background: transparent;
 	border: none;
 	cursor: pointer;
+	font-size: 1em;
 	@include transition(all 0.3s ease-in-out);
 	// @include tilt;
 
@@ -86,8 +87,10 @@ a, button{
 	}
 
 	&, &.btn-md{
-		font-size:14px;
+		font-size: 1em;
 		padding: 10px 20px;
+		letter-spacing: 1px;
+		font-weight: bold;
 	}
 	
 }

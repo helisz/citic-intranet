@@ -5,7 +5,7 @@
   background-color: white; }
 
 .bg-primary {
-  background-color: #263368; }
+  background-color: #263368 !important; }
 
 .bg-secondary {
   background-color: #d7000f; }
@@ -61,7 +61,7 @@ hr {
   border-radius: 5px; }
 
 .section .section-title {
-  font-size: 12px;
+  font-size: 0.8em;
   padding: 10px 15px;
   font-weight: bold;
   color: #AAA; }
@@ -78,6 +78,7 @@ a, button {
   background: transparent;
   border: none;
   cursor: pointer;
+  font-size: 1em;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -94,8 +95,10 @@ a, button {
   background-color: #d7000f; }
 
 .btn, .btn.btn-md {
-  font-size: 14px;
-  padding: 10px 20px; }
+  font-size: 1em;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  font-weight: bold; }
 
 button {
   box-shadow: none; }
@@ -426,7 +429,7 @@ ul.slick-dots li:hover {
   line-height: 50px;
   padding: 0px 15px;
   color: white;
-  font-size: 14px; }
+  font-size: 1em; }
 
 #main-nav > ul > li > a:before {
   background-color: transparent; }
@@ -488,7 +491,11 @@ ul.slick-dots li:hover {
   background: #ccc; }
 
 .language-switcher .qtranxs_widget {
-  margin: 0; }
+  margin: 0;
+  background: transparent;
+  padding: inherit;
+  border: none;
+  border-radius: unset; }
 
 .language-switcher .qtranxs_widget ul {
   margin: 0;
@@ -503,6 +510,32 @@ ul.slick-dots li:hover {
 
 .language-switcher .qtranxs_widget ul li:not(:last-child) {
   border-right: 1px solid #8796d3; }
+
+.language-switcher ul.ct-font-resizer {
+  list-style: none;
+  margin: 0 0 0 20px;
+  padding: 0; }
+
+.language-switcher ul.ct-font-resizer li.fontResizer {
+  min-width: 100px; }
+
+.language-switcher ul.ct-font-resizer li.fontResizer a {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  padding: 0px;
+  line-height: 26px;
+  background: #EEE;
+  vertical-align: middle; }
+
+.language-switcher ul.ct-font-resizer li.fontResizer a.fontResizer_minus {
+  font-size: 10px !important; }
+
+.language-switcher ul.ct-font-resizer li.fontResizer a.fontResizer_reset {
+  font-size: 14px !important; }
+
+.language-switcher ul.ct-font-resizer li.fontResizer a.fontResizer_add {
+  font-size: 18px !important; }
 
 #bottom {
   background: #263368;

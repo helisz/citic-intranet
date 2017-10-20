@@ -6,25 +6,25 @@
   text-align: right !important;
 }
 .text-xs{
-  font-size: 12px;
+  font-size: 0.8em;
 }
 .text-sm{
-  font-size: 14px;
+  font-size: 1em;
 }
 .text-md{
-  font-size: 16px;
+  font-size: 1.2em;
 }
 .text-lg{
-  font-size: 20px;
+  font-size: 1.4em;
 }
 .text-xl{
-  font-size: 24px;
+  font-size: 1.8em;
 }
 .text-xxl{
-  font-size: 28px;
+  font-size: 2em;
 }
 .text-xxl{
-  font-size: 32px;
+  font-size: 3em;
 }
 
 .p-xxs {
