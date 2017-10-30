@@ -1,0 +1,21 @@
+.custom-post-featured-image{
+	position:relative;
+	height: 400px;
+		margin-bottom: -80px;
+		height: 350px;
+
+	@media (max-width: $screen-xs-max) { 
+		// height: 300px;
+	}
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { 
+		// height: 300px;
+	}
+
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
+		// height: 400px;
+	}
+	@media (min-width: $screen-lg-min) { 
+		// margin-bottom: -80px;
+		// height: 350px;
+	}
+}

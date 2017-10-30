@@ -193,10 +193,7 @@ get_header(); ?>
 							</div>				
 					</div>
 				</div>
-
-
-
-				<div class="p-md text-center">
+				<div class="text-center">
 					<a href="news" class="btn btn-primary">
 						瀏覽所有最新消息
 					</a>
@@ -256,7 +253,6 @@ get_header(); ?>
 						</a>
 					</div>
 				</div>
-
 
 
 				<div class="section">

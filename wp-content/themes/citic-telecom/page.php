@@ -30,7 +30,6 @@ get_header(); ?>
 		<?php echo do_shortcode( '[breadcrumb]' ); ?>
 	</div>
 </div>
-
 <div class="container">	
 	<div class="row">
 	<div id="primary" class="content-area col-sm-8">

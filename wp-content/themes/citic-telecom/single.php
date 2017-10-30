@@ -33,11 +33,13 @@ get_header(); ?>
 	</div>
 </div>
 
+<div class="custom-post-featured-image image-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)"></div>
+
 
 <div class="container">	
 	<div class="row">
 	<div id="primary" class="content-area col-sm-8">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main remove-featured-image" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 

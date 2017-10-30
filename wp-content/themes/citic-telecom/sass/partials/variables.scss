@@ -1,5 +1,5 @@
 // DEFINITIONS
-$radius: 5px !default;
+$radius: 0px !default;
 
 $gray: #F4F4F4 !default;
 $bg-color: $gray !default;
@@ -98,3 +98,10 @@ $border-color: #E3E3E3 !default;
 	    bottom: 0;
 	}
 }
+
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
