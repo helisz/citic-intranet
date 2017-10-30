@@ -193,6 +193,9 @@ get_header(); ?>
 							</div>				
 					</div>
 				</div>
+
+
+
 				<div class="text-center">
 					<a href="news" class="btn btn-primary">
 						瀏覽所有最新消息

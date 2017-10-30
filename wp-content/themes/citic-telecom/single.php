@@ -33,8 +33,10 @@ get_header(); ?>
 	</div>
 </div>
 
-<div class="custom-post-featured-image image-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)"></div>
-
+<!-- custom thumbnail -->
+<?php if(get_the_post_thumbnail_url()){ ?>
+	<div class="custom-post-featured-image image-bg" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)"></div>
+<?php } ?>
 
 <div class="container">	
 	<div class="row">

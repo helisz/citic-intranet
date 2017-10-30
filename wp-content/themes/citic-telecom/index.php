@@ -12,7 +12,6 @@
  */
 
 get_header(); ?>
-
 <div class="page-head">
 	<div class="container">
 		<div class="row">

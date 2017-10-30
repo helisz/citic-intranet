@@ -546,6 +546,15 @@ ul.slick-dots li:hover {
 .language-switcher ul.ct-font-resizer li.fontResizer a.fontResizer_add {
   font-size: 18px !important; }
 
+.page-head {
+  background: white;
+  border: 0;
+  padding: 40px 0px; }
+
+.page-head h3 {
+  padding: 0 20px;
+  color: #263368; }
+
 #bottom {
   background: #263368;
   border-top: 5px solid #secondary-color; }

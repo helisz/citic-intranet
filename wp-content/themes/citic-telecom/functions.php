@@ -180,6 +180,35 @@ function remove_editor_init() {
 add_action( 'init', 'remove_editor_init' );
 
 
+
+
+///////////////////////
+/// CUSTOM BY CITIC ///
+///////////////////////
+// Display category recent post, not all
+add_filter( 'widget_posts_args', 'my_widget_posts_args');
+function my_widget_posts_args($args) {
+	if ( is_category() ) { //adds the category parameter in the query if we display a category
+		$cat = get_queried_object();
+		return array(
+			'posts_per_page' => 5,//set the number you want here 
+			'no_found_rows' => true, 
+			'post_status' => 'publish', 
+			'ignore_sticky_posts' => true,
+			'cat' => $cat -> term_id//the current category id
+			 );
+	}
+	else {//keeps the normal behaviour if we are not in category context
+		return $args;
+	}
+}
+
+
+
+
+
+
+
 /**
  * Implement the Custom Header feature.
  */

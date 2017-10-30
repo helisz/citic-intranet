@@ -37,6 +37,32 @@ get_header(); ?>
 	<div id="primary" class="content-area col-sm-8">
 		<main id="main" class="site-main" role="main">
 
+<?php
+    $categories = get_the_category();
+    $catID = $categories[0]->cat_ID;
+?>
+<?php $subcats = get_categories('child_of=' . $catID);
+    foreach($subcats as $subcat) {
+    echo '<h3>' . $subcat->cat_name . '</h3>';
+    echo '<ul>';
+    $subcat_posts = get_posts('cat=' . $subcat->cat_ID);
+    foreach($subcat_posts as $subcat_post) {
+        $postID = $subcat_post->ID;
+    echo '<li>';
+    echo '<a href="' . get_permalink($postID) . '">';
+    echo get_the_title($postID);
+    echo '</a></li>';
+    }
+    echo '</ul>';
+    } ?>
+
+
+
+
+
+
+
+
 			
 			<?php 
 			$portcat = 'announcements';
