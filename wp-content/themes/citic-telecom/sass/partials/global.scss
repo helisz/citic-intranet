@@ -22,7 +22,13 @@ hr{
 	padding: 25px;
 	border: 1px solid $border-color;
 	border-radius: $radius;
+	&.post-list{
+		border: none !important;
+		padding: 0 !important;
+	}
 }
+
+
 
 #main{
 	&.remove-featured-image{
@@ -53,7 +59,9 @@ hr{
 		}
 	}
 }
-
+.breadcrumb{
+	margin: 0;
+}
 
 a, button{
 	outline: none !important;

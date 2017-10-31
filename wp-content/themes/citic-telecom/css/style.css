@@ -54,6 +54,10 @@ hr {
   border: 1px solid #E3E3E3;
   border-radius: 0px; }
 
+#main.post-list, .widget.post-list {
+  border: none !important;
+  padding: 0 !important; }
+
 #main.remove-featured-image > img {
   display: none; }
 
@@ -72,6 +76,9 @@ hr {
 .section .section-title h1, .section .section-title h2 {
   font-weight: lighter;
   color: #263368; }
+
+.breadcrumb {
+  margin: 0; }
 
 a, button {
   outline: none !important; }
@@ -467,7 +474,8 @@ ul.slick-dots li:hover {
 #main-nav ul#topmenu > li.menu-item.menu-item-home > a:before {
   background-color: #263368 !important; }
 
-#main-nav ul#topmenu > li.menu-item.current-menu-item > a:before {
+#main-nav ul#topmenu > li.menu-item.current-menu-item > a:before, #main-nav ul#topmenu > li.menu-item.current-category-ancestor > a:before,
+#main-nav ul#topmenu > li.menu-item.current-category-ancestor .current-menu-item > a:before {
   background-color: #c8000e; }
 
 #main-nav ul#topmenu ul {
@@ -549,11 +557,40 @@ ul.slick-dots li:hover {
 .page-head {
   background: white;
   border: 0;
-  padding: 40px 0px; }
+  padding: 40px 0px 20px 0;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); }
 
 .page-head h3 {
-  padding: 0 20px;
+  padding: 0;
+  font-size: 3em;
+  font-weight: 300;
   color: #263368; }
+
+.page-head .sub-categories {
+  margin-top: 10px;
+  text-transform: uppercase; }
+
+.page-head .sub-categories a, .page-head .sub-categories a:visited {
+  color: #263368;
+  background: #f7f8fc;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 4px 10px;
+  margin-right: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.page-head .sub-categories a:hover, .page-head .sub-categories a:active, .page-head .sub-categories a:focus, .page-head .sub-categories a:visited:hover, .page-head .sub-categories a:visited:active, .page-head .sub-categories a:visited:focus {
+  color: #d7000f;
+  background: #fff1f2; }
+
+.page-head .arrow {
+  color: #acb7e1;
+  padding: 0 12px 0 4px; }
 
 #bottom {
   background: #263368;

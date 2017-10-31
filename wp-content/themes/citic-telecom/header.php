@@ -75,6 +75,8 @@
 
 
 
-		<?php if( is_page_template('homepage.php') ){ get_template_part( 'inc/feature' ); } ?>
+		<?php if( is_page_template('homepage.php') ){ 
+			// get_template_part( 'inc/feature' ); 
+		} ?>
 
-		<div id="content" class="site-content bg-gray">
+		<div id="content" class="site-content <?php if( is_page_template('page-homepage.php')){echo 'bg-gray';} ?>">

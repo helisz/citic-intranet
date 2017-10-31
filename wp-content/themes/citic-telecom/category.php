@@ -16,13 +16,13 @@ get_header(); ?>
 			<div class="col-12">
 				<h3>
 					<?php
-						if ( is_category() ) :
-							single_cat_title();
+					if ( is_category() ) :
+						single_cat_title();
 
-						elseif ( is_tag() ) :
-							single_tag_title();
+					elseif ( is_tag() ) :
+						single_tag_title();
 
-						elseif ( is_author() ) :
+					elseif ( is_author() ) :
 							/* Queue the first post, that way we know
 							 * what author we're dealing with (if that is the case).
 							*/
@@ -62,49 +62,77 @@ get_header(); ?>
 							_e( 'Archives', 'web2feel' );
 
 						endif;
-					?>
+						?>
+					</h3>
+					<!-- <p> Archive pages </p> -->
+					<div class="sub-categories">
+						<!-- List of sub categories -->
+						<?php 
+							$categories = get_the_category();
+							$my_category = $categories[0];
+							$catID = $categories[0]->cat_ID;
+							$args = array('child_of' => $catID);
+							$categories = get_categories( $args );
+							$catLength = count($categories);
+							$i = 0;
 
-				</h3>
-				<!-- <p> Archive pages </p> -->
+						?>
+
+						<?php if($my_category) : ?>
+						<div class="sub-categories">
+							<?php
+								echo '<a href="' . get_category_link( $my_category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $my_category->name ) . '" ' . '>' . $my_category->name.'</a>';
+								echo '<span class="arrow">></span>';
+								foreach($categories as $key=>$category) { 
+								    echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a>';
+								  //   if(++$i !== $catLength) {
+									 //    echo "<span class='separator'>·</span>";
+									 // }
+								}
+						 	?>
+					 	</div>
+					 	<?php endif ?>
+					</div>
+				</div>
+
 			</div>
-			
 		</div>
 	</div>
-</div>
 
-<div class="container">	
-	<div class="row">
-	<section id="primary" class="content-area col-sm-8">
-		<main id="main" class="site-main" role="main">
+	<div class="container">	
+		<div class="row">
+			<section id="primary" class="content-area col-sm-8">
+				<main id="main" class="site-main post-list" role="main">
 
-		<?php if ( have_posts() ) : ?>
+						<?php if ( have_posts() ) : ?>
 
-		
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+						<?php /* Start the Loop */ ?>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+						<?php
+						/* Include the Post-Format-specific template for the content.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'content', get_post_format() );
+						?>
 
-			<?php web2feel_content_nav( 'nav-below' ); ?>
 
-		<?php else : ?>
+						<?php endwhile; ?>
 
-			<?php get_template_part( 'no-results', 'archive' ); ?>
+						<?php web2feel_content_nav( 'nav-below' ); ?>
 
-		<?php endif; ?>
+					<?php else : ?>
+
+						<?php get_template_part( 'no-results', 'archive' ); ?>
+
+					<?php endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
-	</div>
+	<?php get_sidebar(); ?>
+</div>
 </div>
 <?php get_footer(); ?>
