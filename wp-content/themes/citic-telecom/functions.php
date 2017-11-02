@@ -183,7 +183,7 @@ add_action( 'init', 'remove_editor_init' );
 
 
 ///////////////////////
-/// CUSTOM BY CITIC ///
+/// CUSTOM BY CHRIS ///
 ///////////////////////
 // Display category recent post, not all
 add_filter( 'widget_posts_args', 'my_widget_posts_args');
@@ -198,16 +198,10 @@ function my_widget_posts_args($args) {
 			'cat' => $cat -> term_id//the current category id
 			 );
 	}
-	else {//keeps the normal behaviour if we are not in category context
+	else {	//keeps the normal behaviour if we are not in category context
 		return $args;
 	}
 }
-
-
-
-
-
-
 
 /**
  * Implement the Custom Header feature.
