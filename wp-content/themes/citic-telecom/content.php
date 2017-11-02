@@ -8,7 +8,7 @@
 
 
 	<!-- custom format -->
-	<div class="row">
+	<div class="row post-list-element">
 
 		<div class="col-md-3">
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
@@ -23,13 +23,16 @@
 					<?php endif; ?>					
 			</a>			
 					
-		</div>		
+		</div>
 
 		<div class="col-md-9">
-			<header class="entry-header">
+			<header class="entry-header">				
 				<?php if ( 'post' == get_post_type() ) : ?>
 					<div class="entry-meta m-b">
 						<?php web2feel_posted_on(); ?>
+<!-- 
+						By <?php the_author_posts_link(); ?> on <?php the_time('l, F j, Y'); ?>  in <?php the_category(', '); ?> -->
+
 					</div><!-- .entry-meta -->
 				<?php endif; ?>
 				<div class="entry-title h3 text-bold"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
