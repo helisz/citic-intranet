@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Blank
+ * Template name: Knowledge Base
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -34,7 +34,8 @@ get_header(); ?>
 <div class="container">	
 	<div class="row">
 		<div id="primary" class="content-area col-sm-12">
-			<main id="main" class="site-main" role="main">
+			<main id="main" class="site-main post-list" role="main">
+				<?php add_filter( 'the_title', function ($title) { return "";}); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>

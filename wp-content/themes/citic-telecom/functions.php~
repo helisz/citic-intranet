@@ -110,7 +110,7 @@ if ( function_exists('register_sidebar') ){
 
 	register_sidebar(array(
 		'name' => 'Footer Widget Area 0',
-		'before_widget' => '<div class = "footer-widget footer-widget-0 col-sm-12 col-md-3">',
+		'before_widget' => '<div class = "footer-widget footer-widget-large col-sm-12 col-md-3">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',

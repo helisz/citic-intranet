@@ -14,7 +14,7 @@
 		<div class="container">
 			<div class="row">
 			
-			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Widget Area 0") ) : ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Widget Area Cust") ) : ?>
 			<?php endif;?>
 
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Footer Widget Area 1") ) : ?>
